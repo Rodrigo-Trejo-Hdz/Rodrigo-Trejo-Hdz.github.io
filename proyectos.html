@@ -1,12 +1,236 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Proyectos</title><link rel="stylesheet" href="style.css"></head>
-<body><header><h1>Proyectos</h1>
-<nav><a href="index.html">Inicio</a><a href="proyectos.html">Proyectos</a><a href="cursos.html">Cursos</a><a href="contacto.html">Contacto</a></nav></header>
-<section><ul>
-<li><h3>📊 Análisis Estadístico con Python</h3><p>EDA, visualizaciones y modelos con pandas y scikit-learn.</p></li>
-<li><h3>⚙️ ETL en AWS Glue</h3><p>Pipeline demo con PySpark.</p></li>
-<li><h3>🤖 Power BI + Chatbot IA</h3><p>Demo sanitizada mostrando arquitectura.</p></li>
-</ul></section>
-<footer><p>© 2025 Rocko Trejo</p></footer>
-</body></html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyectos de [Tu Nombre] - Portfolio Developer">
+    <title>Proyectos - Portfolio Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVEGACIÓN -->
+    <nav>
+        <a href="index.html" class="logo">&lt;/Dev&gt;</a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container">
+        <!-- Encabezado de la sección -->
+        <div class="section-header">
+            <div class="section-number">02. PORTAFOLIO</div>
+            <h2>Proyectos Destacados</h2>
+            <p class="section-description">
+                Una selección de mis trabajos más recientes y significativos
+            </p>
+        </div>
+
+        <!-- Grid de proyectos -->
+        <div class="projects-grid">
+            
+            <!-- Proyecto 1 -->
+            <div class="project-card">
+                <div class="project-image-container">
+                    <!-- Puedes usar un emoji o una imagen -->
+                    🚀
+                    <!-- O usar una imagen: -->
+                    <!-- <img src="assets/images/proyecto1.jpg" alt="E-Commerce Platform"> -->
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">E-Commerce Platform</h3>
+                    <p class="project-description">
+                        Plataforma completa de comercio electrónico con carrito de compras, sistema de pagos integrado, 
+                        panel de administración y análisis en tiempo real.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">MongoDB</span>
+                        <span class="tech-badge">Stripe</span>
+                    </div>
+                    <div class="project-code">// Implementación del carrito
+const addToCart = (product) => {
+  dispatch({
+    type: 'ADD_TO_CART',
+    payload: product
+  });
+  updateLocalStorage();
+}</div>
+                    <div class="project-links">
+                        <a href="https://github.com/tuusuario/proyecto1" target="_blank" class="project-link">GitHub</a>
+                        <a href="https://proyecto1.com" target="_blank" class="project-link">Demo Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="project-card">
+                <div class="project-image-container" style="background: linear-gradient(135deg, #ff006e, #8338ec);">
+                    📱
+                    <!-- <img src="assets/images/proyecto2.jpg" alt="Task Manager App"> -->
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Task Manager App</h3>
+                    <p class="project-description">
+                        Aplicación móvil multiplataforma para gestión de tareas con sincronización en la nube, 
+                        notificaciones inteligentes y colaboración en equipo.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">React Native</span>
+                        <span class="tech-badge">Firebase</span>
+                        <span class="tech-badge">Redux</span>
+                    </div>
+                    <div class="project-code">// Sistema de notificaciones
+const scheduleNotification = async (task) => {
+  await Notifications.scheduleAsync({
+    content: { title: task.title },
+    trigger: { date: task.deadline }
+  });
+}</div>
+                    <div class="project-links">
+                        <a href="https://github.com/tuusuario/proyecto2" target="_blank" class="project-link">GitHub</a>
+                        <a href="https://proyecto2.com" target="_blank" class="project-link">Demo Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <div class="project-card">
+                <div class="project-image-container" style="background: linear-gradient(135deg, #06ffa5, #00d4ff);">
+                    🎮
+                    <!-- <img src="assets/images/proyecto3.jpg" alt="Real-Time Dashboard"> -->
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Real-Time Dashboard</h3>
+                    <p class="project-description">
+                        Dashboard analítico con visualización de datos en tiempo real, métricas personalizables 
+                        y sistema de alertas automatizado.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Vue.js</span>
+                        <span class="tech-badge">D3.js</span>
+                        <span class="tech-badge">WebSocket</span>
+                    </div>
+                    <div class="project-code">// WebSocket connection
+const ws = new WebSocket(WS_URL);
+ws.onmessage = (event) => {
+  const data = JSON.parse(event.data);
+  updateCharts(data);
+}</div>
+                    <div class="project-links">
+                        <a href="https://github.com/tuusuario/proyecto3" target="_blank" class="project-link">GitHub</a>
+                        <a href="https://proyecto3.com" target="_blank" class="project-link">Demo Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 4 - Ejemplo adicional -->
+            <div class="project-card">
+                <div class="project-image-container" style="background: linear-gradient(135deg, #ffd60a, #ff006e);">
+                    🤖
+                    <!-- <img src="assets/images/proyecto4.jpg" alt="AI Chatbot"> -->
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">AI Chatbot</h3>
+                    <p class="project-description">
+                        Chatbot inteligente con procesamiento de lenguaje natural, integración con múltiples APIs 
+                        y aprendizaje continuo.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">TensorFlow</span>
+                        <span class="tech-badge">FastAPI</span>
+                    </div>
+                    <div class="project-code">// NLP Processing
+def process_message(text):
+    tokens = tokenizer.encode(text)
+    response = model.predict(tokens)
+    return decode_response(response)</div>
+                    <div class="project-links">
+                        <a href="https://github.com/tuusuario/proyecto4" target="_blank" class="project-link">GitHub</a>
+                        <a href="https://proyecto4.com" target="_blank" class="project-link">Demo Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 5 - Ejemplo adicional -->
+            <div class="project-card">
+                <div class="project-image-container" style="background: linear-gradient(135deg, #4cc9f0, #7209b7);">
+                    🎨
+                    <!-- <img src="assets/images/proyecto5.jpg" alt="Design System"> -->
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Design System</h3>
+                    <p class="project-description">
+                        Sistema de diseño completo con componentes reutilizables, documentación interactiva 
+                        y tokens de diseño configurables.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Storybook</span>
+                        <span class="tech-badge">Styled Components</span>
+                    </div>
+                    <div class="project-code">// Component Library
+export const Button = styled.button`
+  background: ${props => props.theme.colors.primary};
+  padding: ${props => props.theme.spacing.md};
+  border-radius: ${props => props.theme.radii.lg};
+`;</div>
+                    <div class="project-links">
+                        <a href="https://github.com/tuusuario/proyecto5" target="_blank" class="project-link">GitHub</a>
+                        <a href="https://proyecto5.com" target="_blank" class="project-link">Demo Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 6 - Ejemplo adicional -->
+            <div class="project-card">
+                <div class="project-image-container" style="background: linear-gradient(135deg, #06ffa5, #ffd60a);">
+                    📊
+                    <!-- <img src="assets/images/proyecto6.jpg" alt="Analytics Platform"> -->
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Analytics Platform</h3>
+                    <p class="project-description">
+                        Plataforma de análisis de datos con visualizaciones interactivas, reportes automatizados 
+                        y machine learning para predicciones.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Pandas</span>
+                        <span class="tech-badge">Plotly</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                    </div>
+                    <div class="project-code">// Data Analysis
+import pandas as pd
+df = pd.read_sql(query, conn)
+insights = df.groupby('category')
+  .agg({'revenue': 'sum'})
+  .sort_values(descending=True)</div>
+                    <div class="project-links">
+                        <a href="https://github.com/tuusuario/proyecto6" target="_blank" class="project-link">GitHub</a>
+                        <a href="https://proyecto6.com" target="_blank" class="project-link">Demo Live</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

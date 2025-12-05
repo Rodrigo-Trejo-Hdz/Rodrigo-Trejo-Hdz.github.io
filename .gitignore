@@ -1,0 +1,36 @@
+# Archivos del sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (si decides agregar herramientas de build)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Archivos de respaldo
+*.bak
+*.backup
+*_backup.*
+
+# Archivos de configuración local
+.env
+.env.local
+config.local.js

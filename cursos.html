@@ -1,14 +1,279 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cursos</title><link rel="stylesheet" href="style.css"></head>
-<body><header><h1>Cursos y Certificaciones</h1>
-<nav><a href="index.html">Inicio</a><a href="proyectos.html">Proyectos</a><a href="cursos.html">Cursos</a><a href="contacto.html">Contacto</a></nav></header>
-<section><ul>
-<li>AWS Cloud Practitioner</li>
-<li>Machine Learning - Coursera</li>
-<li>Data Analysis with Python</li>
-<li>Python para Ciencia de Datos - Udemy</li>
-<li>Matlab - MathWorks</li>
-</ul></section>
-<footer><p>© 2025 Rocko Trejo</p></footer>
-</body></html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Certificaciones y cursos de [Tu Nombre] - Portfolio Developer">
+    <title>Cursos - Portfolio Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVEGACIÓN -->
+    <nav>
+        <a href="index.html" class="logo">&lt;/Dev&gt;</a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container">
+        <!-- Encabezado de la sección -->
+        <div class="section-header">
+            <div class="section-number">03. EDUCACIÓN</div>
+            <h2>Certificaciones</h2>
+            <p class="section-description">
+                Formación continua y certificaciones profesionales
+            </p>
+        </div>
+
+        <!-- Lista de cursos -->
+        <div class="courses-container">
+            
+            <!-- Curso 1 -->
+            <div class="course-card">
+                <div class="course-header" onclick="toggleCourse(this)">
+                    <div class="course-main-info">
+                        <h3 class="course-title-text">Full Stack Web Development</h3>
+                        <p class="course-institution">freeCodeCamp • 2024</p>
+                    </div>
+                    <div class="course-actions">
+                        <a href="https://www.freecodecamp.org/certification/tuusuario/responsive-web-design" 
+                           class="course-link" 
+                           target="_blank" 
+                           onclick="event.stopPropagation()">
+                            Ver Credencial
+                        </a>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                </div>
+                <div class="course-details">
+                    <div class="course-details-content">
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <div class="course-info-label">Duración</div>
+                                <div class="course-info-value">300 horas</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Modalidad</div>
+                                <div class="course-info-value">Online</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Proyectos</div>
+                                <div class="course-info-value">15+</div>
+                            </div>
+                        </div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Habilidades Adquiridas</h4>
+                        <ul class="course-skills-list">
+                            <li>HTML5, CSS3 y JavaScript Moderno (ES6+)</li>
+                            <li>React y Redux para desarrollo frontend</li>
+                            <li>Node.js y Express para backend</li>
+                            <li>MongoDB y bases de datos NoSQL</li>
+                            <li>API REST y autenticación JWT</li>
+                            <li>Testing con Jest y Cypress</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curso 2 -->
+            <div class="course-card">
+                <div class="course-header" onclick="toggleCourse(this)">
+                    <div class="course-main-info">
+                        <h3 class="course-title-text">Python for Data Science</h3>
+                        <p class="course-institution">Coursera • IBM • 2023</p>
+                    </div>
+                    <div class="course-actions">
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/EJEMPLO123" 
+                           class="course-link" 
+                           target="_blank" 
+                           onclick="event.stopPropagation()">
+                            Ver Credencial
+                        </a>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                </div>
+                <div class="course-details">
+                    <div class="course-details-content">
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <div class="course-info-label">Duración</div>
+                                <div class="course-info-value">8 semanas</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Nivel</div>
+                                <div class="course-info-value">Intermedio</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Calificación</div>
+                                <div class="course-info-value">98%</div>
+                            </div>
+                        </div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Habilidades Adquiridas</h4>
+                        <ul class="course-skills-list">
+                            <li>Análisis de datos con Pandas y NumPy</li>
+                            <li>Visualización con Matplotlib y Seaborn</li>
+                            <li>Machine Learning con Scikit-learn</li>
+                            <li>Limpieza y preprocesamiento de datos</li>
+                            <li>Estadística aplicada con Python</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curso 3 -->
+            <div class="course-card">
+                <div class="course-header" onclick="toggleCourse(this)">
+                    <div class="course-main-info">
+                        <h3 class="course-title-text">AWS Certified Cloud Practitioner</h3>
+                        <p class="course-institution">Amazon Web Services • 2023</p>
+                    </div>
+                    <div class="course-actions">
+                        <a href="https://aws.amazon.com/verification/EJEMPLO456" 
+                           class="course-link" 
+                           target="_blank" 
+                           onclick="event.stopPropagation()">
+                            Ver Credencial
+                        </a>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                </div>
+                <div class="course-details">
+                    <div class="course-details-content">
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <div class="course-info-label">Preparación</div>
+                                <div class="course-info-value">3 meses</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Validez</div>
+                                <div class="course-info-value">3 años</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Score</div>
+                                <div class="course-info-value">875/1000</div>
+                            </div>
+                        </div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Habilidades Adquiridas</h4>
+                        <ul class="course-skills-list">
+                            <li>Fundamentos de AWS Cloud Computing</li>
+                            <li>Arquitectura de soluciones en la nube</li>
+                            <li>Seguridad y cumplimiento en AWS</li>
+                            <li>Servicios principales: EC2, S3, RDS, Lambda</li>
+                            <li>Modelos de precios y facturación</li>
+                            <li>Mejores prácticas de migración</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curso 4 - Ejemplo adicional -->
+            <div class="course-card">
+                <div class="course-header" onclick="toggleCourse(this)">
+                    <div class="course-main-info">
+                        <h3 class="course-title-text">Advanced React and TypeScript</h3>
+                        <p class="course-institution">Udemy • 2024</p>
+                    </div>
+                    <div class="course-actions">
+                        <a href="https://www.udemy.com/certificate/UC-ejemplo789" 
+                           class="course-link" 
+                           target="_blank" 
+                           onclick="event.stopPropagation()">
+                            Ver Credencial
+                        </a>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                </div>
+                <div class="course-details">
+                    <div class="course-details-content">
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <div class="course-info-label">Duración</div>
+                                <div class="course-info-value">40 horas</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Nivel</div>
+                                <div class="course-info-value">Avanzado</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Rating</div>
+                                <div class="course-info-value">4.8/5.0</div>
+                            </div>
+                        </div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Habilidades Adquiridas</h4>
+                        <ul class="course-skills-list">
+                            <li>TypeScript avanzado con React</li>
+                            <li>Patrones de diseño en React</li>
+                            <li>Optimización de rendimiento</li>
+                            <li>Testing con React Testing Library</li>
+                            <li>State management con Zustand y Jotai</li>
+                            <li>Server Components y RSC</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curso 5 - Ejemplo adicional -->
+            <div class="course-card">
+                <div class="course-header" onclick="toggleCourse(this)">
+                    <div class="course-main-info">
+                        <h3 class="course-title-text">Docker and Kubernetes</h3>
+                        <p class="course-institution">Linux Foundation • 2023</p>
+                    </div>
+                    <div class="course-actions">
+                        <a href="https://training.linuxfoundation.org/certification/verify" 
+                           class="course-link" 
+                           target="_blank" 
+                           onclick="event.stopPropagation()">
+                            Ver Credencial
+                        </a>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                </div>
+                <div class="course-details">
+                    <div class="course-details-content">
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <div class="course-info-label">Duración</div>
+                                <div class="course-info-value">60 horas</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Tipo</div>
+                                <div class="course-info-value">Certificación</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Nivel</div>
+                                <div class="course-info-value">Profesional</div>
+                            </div>
+                        </div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Habilidades Adquiridas</h4>
+                        <ul class="course-skills-list">
+                            <li>Containerización con Docker</li>
+                            <li>Orquestación con Kubernetes</li>
+                            <li>Despliegue de aplicaciones escalables</li>
+                            <li>CI/CD con Jenkins y GitLab</li>
+                            <li>Monitoreo y logging</li>
+                            <li>Seguridad en contenedores</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

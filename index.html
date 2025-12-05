@@ -1,12 +1,80 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rocko Trejo | Portfolio</title><link rel="stylesheet" href="style.css"></head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de [Tu Nombre] - Desarrollador Full Stack">
+    <title>Inicio - Portfolio Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-<header><h1>Rocko Trejo</h1><h2>Data Scientist • AI Engineer • Data Engineer</h2>
-<nav><a href="index.html">Inicio</a><a href="proyectos.html">Proyectos</a><a href="cursos.html">Cursos</a><a href="contacto.html">Contacto</a></nav></header>
-<section class="intro"><h3>Sobre mí</h3>
-<p>Ingeniero en Ciencia de Datos y Matemáticas con experiencia en Python, AWS Glue, Power BI Embebido y modelos de Machine Learning.</p></section>
-<section class="skills"><h3>Lo que hago</h3>
-<ul><li>ETL con AWS Glue, PySpark y S3.</li><li>Análisis de datos y visualización con Python.</li><li>Machine Learning y Estadística.</li><li>Power BI embebido + Chatbots IA.</li></ul></section>
-<footer><p>© 2025 Rocko Trejo</p></footer>
-</body></html>
+    <!-- NAVEGACIÓN -->
+    <nav>
+        <a href="index.html" class="logo">&lt;/Dev&gt;</a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container">
+        <section class="hero-section">
+            <!-- Contenido del Hero -->
+            <div class="hero-content">
+                <div class="greeting">HOLA, SOY</div>
+                <h1>Rodrigo Trejo<br><span>Data Scientist</span></h1>
+                <p class="subtitle">Creando <span>experiencias digitales</span> excepcionales</p>
+                <p class="hero-description">
+                    Desarrollador Full Stack apasionado por transformar ideas en soluciones tecnológicas innovadoras. 
+                    Especializado en crear aplicaciones web modernas, escalables y de alto rendimiento.
+                </p>
+                
+                <!-- Tags de habilidades -->
+                <div class="skills-tags">
+                    <div class="skill-tag">JavaScript / TypeScript</div>
+                    <div class="skill-tag">React / Next.js</div>
+                    <div class="skill-tag">Node.js</div>
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">Cloud (AWS/Azure)</div>
+                    <div class="skill-tag">UI/UX Design</div>
+                </div>
+
+                <!-- Botones de acción -->
+                <div class="cta-buttons">
+                    <a href="proyectos.html" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="contacto.html" class="btn btn-secondary">Contactar</a>
+                </div>
+            </div>
+
+            <!-- Visual del Hero -->
+            <div class="hero-visual">
+                <div class="hero-shape">
+                    <div class="shape-hexagon">
+                        <!-- Puedes reemplazar el emoji con una imagen -->
+                        💻
+                        <!-- O usar una imagen: -->
+                        <!-- <img src="assets/images/profile.jpg" alt="Profile"> -->
+                    </div>
+                    <div class="code-decoration">&lt;code/&gt;</div>
+                    <div class="code-decoration">{...}</div>
+                    <div class="code-decoration">( )</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
