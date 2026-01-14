@@ -1,255 +1,287 @@
-# Portfolio Developer - Documentación
+# Rodrigo Trejo - Data Scientist Portfolio
 
-Portafolio web moderno y estilizado para desarrolladores.
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://rodrigo-trejo-hdz.github.io/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-## 📁 Estructura del Proyecto
+Professional portfolio website for a Data Scientist, showcasing projects, certifications, services, and contact information.
 
-```
-portfolio/
-├── index.html          # Página de inicio
-├── proyectos.html      # Página de proyectos
-├── servicios.html      # Página de servicios freelance
-├── cursos.html         # Página de certificaciones
-├── contacto.html       # Página de contacto
-├── css/
-│   └── style.css      # Estilos globales
-├── js/
-│   └── script.js      # JavaScript interactivo
-├── assets/
-│   ├── images/        # Imágenes de proyectos y perfil
-│   └── icons/         # Iconos personalizados
-└── README.md          # Este archivo
-```
-
-## 🚀 Cómo Usar
-
-### 1. Personalizar Información
-
-#### Página de Inicio (`index.html`)
-- **Línea 36:** Cambia "Tu Nombre" por tu nombre real
-- **Líneas 51-56:** Actualiza las tecnologías en los skill-tags
-- **Línea 67:** Opcional - reemplaza el emoji 💻 con tu foto de perfil
-
-#### Página de Proyectos (`proyectos.html`)
-Para cada proyecto:
-- **Línea 35:** Reemplaza el emoji con una imagen real de tu proyecto
-  ```html
-  <img src="assets/images/proyecto1.jpg" alt="Descripción">
-  ```
-- **Líneas 39-50:** Actualiza título, descripción, tecnologías y código
-- **Líneas 52-53:** Agrega los enlaces reales a GitHub y demo
-
-#### Página de Cursos (`cursos.html`)
-Para cada curso:
-- **Línea 35:** Actualiza el título de la certificación
-- **Línea 36:** Institución y año
-- **Líneas 39-42:** URL de la credencial
-- **Líneas 48-54:** Información del curso (duración, nivel, etc.)
-- **Líneas 57-64:** Lista de habilidades adquiridas
-
-#### Página de Contacto (`contacto.html`)
-- **Líneas 45, 55, 65, 75, 85, 95:** Actualiza los enlaces y datos de contacto
-- **Líneas 103-119:** Actualiza los enlaces a redes sociales
-
-#### Página de Servicios (`servicios.html`)
-Para cada servicio:
-- **Línea 40:** Cambia el emoji por un icono o imagen
-- **Líneas 44-47:** Actualiza título y descripción del servicio
-- **Líneas 50-57:** Lista de características incluidas
-- **Líneas 60-67:** Herramientas y tecnologías que usas
-- **Líneas 71-79:** Actualiza los precios (por hora y por proyecto)
-- **Línea 82:** Enlace al formulario de contacto
-
-**Agregar más servicios:**
-Copia cualquier bloque `.service-card` y personalízalo con tu información.
-
-**Marcar un servicio como "Más Popular":**
-Agrega la clase `featured` al div: `<div class="service-card featured">`
-
-### 2. Agregar Imágenes
-
-#### Para Proyectos
-1. Coloca tus imágenes en `assets/images/`
-2. Nombra los archivos: `proyecto1.jpg`, `proyecto2.png`, etc.
-3. Reemplaza en el HTML:
-   ```html
-   <div class="project-image-container">
-       <img src="assets/images/proyecto1.jpg" alt="Nombre del Proyecto">
-   </div>
-   ```
-
-#### Para Perfil (Inicio)
-1. Coloca tu foto en `assets/images/profile.jpg`
-2. En `index.html` línea 67, reemplaza:
-   ```html
-   <div class="shape-hexagon">
-       <img src="assets/images/profile.jpg" alt="Profile">
-   </div>
-   ```
-
-#### Para Iconos
-1. Descarga iconos SVG de sitios como:
-   - [Heroicons](https://heroicons.com/)
-   - [Feather Icons](https://feathericons.com/)
-   - [Font Awesome](https://fontawesome.com/)
-2. Colócalos en `assets/icons/`
-3. Reemplaza los emojis:
-   ```html
-   <div class="contact-icon">
-       <img src="assets/icons/email.svg" alt="Email">
-   </div>
-   ```
-
-### 3. Personalizar Colores
-
-Edita las variables en `css/style.css` (líneas 1-10):
-
-```css
-:root {
-    --primary-color: #00f5ff;      /* Color principal (cyan) */
-    --secondary-color: #9d4edd;    /* Color secundario (púrpura) */
-    --accent-color: #ff006e;       /* Color de acento (rosa) */
-    --bg-dark: #0a0e27;           /* Fondo oscuro */
-    --bg-card: #151b3d;           /* Fondo de tarjetas */
-    --text-light: #ffffff;        /* Texto claro */
-    --text-gray: #a8b2d1;         /* Texto secundario */
-}
-```
-
-### 4. Agregar Más Proyectos
-
-Copia este bloque en `proyectos.html` y personaliza:
-
-```html
-<div class="project-card">
-    <div class="project-image-container">
-        <img src="assets/images/nuevo-proyecto.jpg" alt="Nuevo Proyecto">
-    </div>
-    <div class="project-info">
-        <h3 class="project-title">Nombre del Proyecto</h3>
-        <p class="project-description">
-            Descripción del proyecto...
-        </p>
-        <div class="project-tech">
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">Node.js</span>
-        </div>
-        <div class="project-code">// Tu código aquí</div>
-        <div class="project-links">
-            <a href="https://github.com/..." target="_blank" class="project-link">GitHub</a>
-            <a href="https://..." target="_blank" class="project-link">Demo Live</a>
-        </div>
-    </div>
-</div>
-```
-
-### 5. Agregar Más Cursos
-
-Copia este bloque en `cursos.html` y personaliza:
-
-```html
-<div class="course-card">
-    <div class="course-header" onclick="toggleCourse(this)">
-        <div class="course-main-info">
-            <h3 class="course-title-text">Nombre del Curso</h3>
-            <p class="course-institution">Institución • Año</p>
-        </div>
-        <div class="course-actions">
-            <a href="URL_CREDENCIAL" 
-               class="course-link" 
-               target="_blank" 
-               onclick="event.stopPropagation()">
-                Ver Credencial
-            </a>
-            <div class="toggle-icon">▼</div>
-        </div>
-    </div>
-    <div class="course-details">
-        <div class="course-details-content">
-            <div class="course-info-grid">
-                <div class="course-info-item">
-                    <div class="course-info-label">Duración</div>
-                    <div class="course-info-value">XX horas</div>
-                </div>
-            </div>
-            <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Habilidades Adquiridas</h4>
-            <ul class="course-skills-list">
-                <li>Habilidad 1</li>
-                <li>Habilidad 2</li>
-            </ul>
-        </div>
-    </div>
-</div>
-```
-
-## 🎨 Características del Diseño
-
-- **Diseño Oscuro:** Fondo oscuro con gradientes neón
-- **Efectos de Glow:** Sombras y brillos en hover
-- **Animaciones:** Transiciones suaves y fluidas
-- **Responsive:** Adaptable a móviles, tablets y escritorio
-- **Navegación Fija:** Barra de navegación siempre visible
-- **Acordeones:** Cursos expandibles con información detallada
-
-## 🌐 Desplegar el Portfolio
-
-### Opción 1: GitHub Pages (Gratis)
-1. Crea un repositorio en GitHub
-2. Sube todos los archivos
-3. Ve a Settings > Pages
-4. Selecciona la rama `main` y guarda
-5. Tu sitio estará en `https://tuusuario.github.io/nombre-repo`
-
-### Opción 2: Netlify (Gratis)
-1. Arrastra la carpeta `portfolio` a [netlify.com/drop](https://app.netlify.com/drop)
-2. Tu sitio se publicará automáticamente
-
-### Opción 3: Vercel (Gratis)
-1. Crea una cuenta en [vercel.com](https://vercel.com)
-2. Importa el repositorio de GitHub
-3. Deploy automático
-
-## 📱 Soporte de Navegadores
-
-- Chrome (recomendado)
-- Firefox
-- Safari
-- Edge
-- Navegadores móviles
-
-## 💡 Tips
-
-1. **Optimiza las imágenes** antes de subirlas (usa [TinyPNG](https://tinypng.com/))
-2. **Usa imágenes WebP** para mejor rendimiento
-3. **Mantén el código limpio** y comentado
-4. **Prueba en diferentes dispositivos** antes de publicar
-5. **Actualiza regularmente** con nuevos proyectos y certificaciones
-
-## 🐛 Problemas Comunes
-
-### Las imágenes no se cargan
-- Verifica que las rutas sean correctas
-- Revisa que los nombres de archivo coincidan (respeta mayúsculas/minúsculas)
-
-### Los enlaces no funcionan
-- Asegúrate de que las rutas sean relativas correctamente
-- Verifica que todos los archivos HTML estén en la raíz del proyecto
-
-### Los estilos no se aplican
-- Verifica que `style.css` esté en la carpeta `css/`
-- Revisa la ruta en el `<link>` de cada HTML
-
-## 📞 Soporte
-
-Si tienes preguntas o problemas, puedes:
-- Revisar este README
-- Consultar los comentarios en el código
-- Buscar en Google o Stack Overflow
-
-## 📄 Licencia
-
-Libre para uso personal y comercial.
+🌐 **Live Site**: [https://rodrigo-trejo-hdz.github.io/](https://rodrigo-trejo-hdz.github.io/)
 
 ---
 
-¡Disfruta de tu nuevo portfolio! 🚀
+## 📋 Table of Contents
+
+- [About](#about)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Structure](#structure)
+- [Pages](#pages)
+- [Installation](#installation)
+- [Customization](#customization)
+- [SEO](#seo)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+---
+
+## 🎯 About
+
+This is a static HTML portfolio website designed for Data Scientists and tech professionals. It features:
+
+- Modern, dark-themed design with neon accents
+- Fully responsive layout (mobile, tablet, desktop)
+- Interactive elements with smooth animations
+- Professional presentation of skills, projects, and certifications
+
+---
+
+## ✨ Features
+
+- **Responsive Design**: Optimized for all screen sizes
+- **Modern UI**: Dark theme with cyan/purple gradient accents
+- **Interactive Elements**:
+  - Expandable certification accordion
+  - Smooth scroll navigation
+  - Hover effects on cards and buttons
+  - Scroll-triggered animations
+  - Mobile hamburger menu
+- **SEO Optimized**: Includes sitemap.xml and meta tags
+- **Fast Loading**: No external dependencies except Google Fonts
+- **Vanilla JavaScript**: No frameworks required
+
+---
+
+## 🛠 Technologies
+
+- **HTML5**: Semantic markup
+- **CSS3**: Modern styling with CSS variables, Grid, Flexbox
+- **Vanilla JavaScript**: ES6+ for interactivity
+- **Google Fonts**: Inter typography
+- **GitHub Pages**: Free hosting
+
+---
+
+## 📁 Structure
+
+```
+Rodrigo-Trejo-Hdz.github.io/
+├── index.html              # Home page
+├── proyectos.html          # Projects portfolio (01. PORTFOLIO)
+├── cursos.html            # Certifications (02. EDUCATION)
+├── contacto.html          # Contact info (03. CONNECT)
+├── servicios.html         # Freelance services (04. FREELANCE)
+│
+├── css/
+│   └── style.css          # Main stylesheet
+│
+├── js/
+│   └── script.js          # JavaScript functionality
+│
+├── assets/
+│   ├── images/            # Images and profile photo
+│   └── certificates/      # PDF certificates
+│
+├── sitemap.xml            # SEO sitemap
+├── README.md              # This file
+├── CLAUDE.md             # Project context for AI
+└── ESTRUCTURA.md         # Structure guide (Spanish)
+```
+
+---
+
+## 📄 Pages
+
+### 1. **Home** (`index.html`)
+Landing page with hero section, professional introduction, 12 technical skills, and CTA buttons.
+
+**Skills showcased:**
+- Python, SQL, Power BI, AWS
+- MATLAB, C++, Excel, Simulink
+- React, Wolfram, TIA Portal, Fusion 360
+
+### 2. **Projects** (`proyectos.html`) - 01. PORTFOLIO
+Portfolio of 6 featured projects with:
+- Project descriptions
+- Technologies used
+- Code snippets
+- GitHub and live demo links
+
+### 3. **Certifications** (`cursos.html`) - 02. EDUCATION
+8 professional certifications with expandable accordion:
+1. Advanced Microsoft Power BI (Coursera)
+2. Machine Learning in Power BI (Coursera)
+3. Refresh Manager Power BI (Microsoft)
+4. MATLAB AI - 6 courses (MathWorks)
+5. AWS Certified AI Practitioner Prep (Udemy)
+6. Amazon Bedrock Getting Started (AWS)
+7. Bloomberg Finance Fundamentals (Bloomberg)
+8. Storyselling Course (ITAM)
+
+### 4. **Contact** (`contacto.html`) - 03. CONNECT
+Contact information with:
+- Email: idm.rodrigo.trejo@gmail.com
+- LinkedIn profile
+- GitHub profile
+- Location: Estado de México, Northern Metro Area
+- Portfolio link
+
+### 5. **Services** (`servicios.html`) - 04. FREELANCE
+6 freelance services offered:
+- Data Analysis and Cleaning
+- UI/UX Development
+- Reporting and Automation (Power BI)
+- Full Stack Web Development
+- Process Automation
+- Technical Consulting
+
+---
+
+## 🚀 Installation
+
+### Local Development
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Rodrigo-Trejo-Hdz/Rodrigo-Trejo-Hdz.github.io.git
+   cd Rodrigo-Trejo-Hdz.github.io
+   ```
+
+2. **Open in browser:**
+   ```bash
+   # Option 1: Direct file opening
+   open index.html  # macOS
+   start index.html # Windows
+   xdg-open index.html # Linux
+
+   # Option 2: Use a local server
+   python -m http.server 8000
+   # Then visit: http://localhost:8000
+   ```
+
+### Deployment to GitHub Pages
+
+1. Fork or clone this repository
+2. Rename to: `your-username.github.io`
+3. Update personal information in all HTML files
+4. Push to GitHub
+5. Enable GitHub Pages in Settings → Pages
+6. Visit: `https://your-username.github.io/`
+
+---
+
+## 🎨 Customization
+
+### Colors
+
+Edit CSS variables in `css/style.css`:
+
+```css
+:root {
+    --primary-color: #00f5ff;    /* Cyan */
+    --secondary-color: #9d4edd;  /* Purple */
+    --accent-color: #ff006e;     /* Pink */
+    --bg-dark: #0a0e27;          /* Dark background */
+    --bg-card: #151b3d;          /* Card background */
+}
+```
+
+### Personal Information
+
+1. **Name and Title**: `index.html` line 36
+2. **Skills**: `index.html` lines 44-56
+3. **Projects**: Update `proyectos.html` with your projects
+4. **Certifications**: Update `cursos.html` with your credentials
+5. **Contact**: Update `contacto.html` with your info
+6. **Services**: Update `servicios.html` with your offerings
+
+### Profile Photo
+
+Replace the emoji in `index.html` line 71:
+
+```html
+<!-- Replace this -->
+💻
+<!-- With this -->
+<img src="assets/images/profile.png" alt="Rodrigo Trejo">
+```
+
+---
+
+## 🔍 SEO
+
+### Sitemap
+
+The `sitemap.xml` file is already configured. Submit it to:
+- [Google Search Console](https://search.google.com/search-console)
+- [Bing Webmaster Tools](https://www.bing.com/webmasters)
+
+### Meta Tags
+
+Each page includes:
+- Descriptive `<title>` tags
+- Meta descriptions
+- Viewport settings for mobile
+
+### Future Improvements
+
+Consider adding:
+- Open Graph tags for social media
+- JSON-LD structured data
+- Google Analytics
+- robots.txt file
+
+---
+
+## 🤝 Contributing
+
+This is a personal portfolio, but suggestions are welcome!
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Commit changes: `git commit -m "Add feature"`
+4. Push to branch: `git push origin feature-name`
+5. Open a Pull Request
+
+---
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+Feel free to use this template for your own portfolio, but please:
+- Remove/replace personal information
+- Update projects and certifications
+- Customize the design to make it your own
+
+---
+
+## 📧 Contact
+
+**Rodrigo Trejo**
+Data Scientist
+
+- **Email**: idm.rodrigo.trejo@gmail.com
+- **LinkedIn**: [Rodrigo Iván Trejo Hernández](https://www.linkedin.com/in/rodrigo-iv%C3%A1n-trejo-hern%C3%A1ndez-300bba249/)
+- **GitHub**: [@Rodrigo-Trejo-Hdz](https://github.com/Rodrigo-Trejo-Hdz)
+- **Portfolio**: [rodrigo-trejo-hdz.github.io](https://rodrigo-trejo-hdz.github.io/)
+
+---
+
+## 🙏 Acknowledgments
+
+- **Google Fonts** for the Inter typeface
+- **GitHub Pages** for free hosting
+- **IntersectionObserver API** for scroll animations
+
+---
+
+<div align="center">
+
+**⭐ If you found this useful, consider starring the repo!**
+
+Made with 💻 by Rodrigo Trejo
+
+</div>

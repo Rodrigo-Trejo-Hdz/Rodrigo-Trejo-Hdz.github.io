@@ -4,12 +4,15 @@
 portfolio/                          ← Carpeta raíz del proyecto
 │
 ├── 📄 index.html                   ← Página principal (inicio)
-├── 📄 proyectos.html               ← Página de proyectos
+├── 📄 proyectos.html               ← Página de proyectos (con filtros)
 ├── 📄 servicios.html               ← Página de servicios freelance
 ├── 📄 cursos.html                  ← Página de certificaciones
 ├── 📄 contacto.html                ← Página de contacto
 │
+├── 📄 sitemap.xml                  ← Sitemap para SEO
 ├── 📄 README.md                    ← Documentación del proyecto
+├── 📄 CLAUDE.md                    ← Contexto para Claude AI
+├── 📄 ESTRUCTURA.md                ← Este archivo
 ├── 📄 .gitignore                   ← Archivos a ignorar en Git
 │
 ├── 📁 css/                         ← Carpeta de estilos
@@ -49,10 +52,14 @@ portfolio/                          ← Carpeta raíz del proyecto
 - [x] .gitignore
 
 ### 📝 Archivos que DEBES AGREGAR
-- [ ] assets/images/profile.jpg (tu foto de perfil)
+- [ ] assets/images/profile.png (tu foto de perfil)
+- [ ] assets/images/og-image.jpg (1200x630px para redes sociales)
 - [ ] assets/images/proyecto1.jpg (capturas de tus proyectos)
 - [ ] assets/images/proyecto2.jpg
 - [ ] assets/images/proyecto3.jpg
+- [ ] assets/favicon/favicon-16x16.png
+- [ ] assets/favicon/favicon-32x32.png
+- [ ] assets/favicon/apple-touch-icon.png (180x180px)
 - [ ] assets/icons/* (iconos SVG - opcional, puedes usar emojis)
 
 ## 🎯 RESUMEN DE PÁGINAS
@@ -63,11 +70,13 @@ portfolio/                          ← Carpeta raíz del proyecto
 - Botones de acción
 - Diseño hero con hexágono
 
-### 2. proyectos.html (Portafolio)
+### 2. proyectos.html (Portafolio) ⭐ ACTUALIZADO
 - 6 proyectos de ejemplo
+- **Filtros interactivos** por categoría (Web, Mobile, Data, AI/ML, Design)
 - Imágenes/iconos de proyectos
 - Descripción y tecnologías
 - Enlaces a GitHub y demos
+- Animaciones smooth al filtrar
 
 ### 3. servicios.html (Servicios Freelance) ⭐ NUEVO
 - 6 servicios con precios
@@ -104,6 +113,8 @@ Contiene TODO el JavaScript:
 - Animaciones de entrada
 - Scroll suave
 - Menú móvil
+- **Light/Dark Mode Toggle** (Nuevo)
+- **Project Filters** (Nuevo)
 
 ## 📦 CÓMO ORGANIZAR TUS ARCHIVOS
 
@@ -186,6 +197,20 @@ Si cambias la estructura, deberás actualizar todas las rutas en los archivos HT
 1. Abre `index.html` en tu navegador
 2. Navega por todas las páginas
 3. Verifica que todo funcione
-4. Comienza a personalizar con tu información
+4. **Prueba el Light/Dark Mode** haciendo clic en 🌙/☀️
+5. **Prueba los filtros de proyectos** en la página Projects
+6. Comienza a personalizar con tu información
+
+## 🆕 CARACTERÍSTICAS NUEVAS (v4.0)
+
+### Light/Dark Mode Toggle
+- Botón en la navegación para cambiar entre modo oscuro y claro
+- Tu preferencia se guarda automáticamente
+- Funciona en todas las páginas
+
+### Project Filters
+- Filtra proyectos por categoría (Web, Mobile, Data Science, AI/ML, Design)
+- Animaciones suaves al filtrar
+- Reorganización automática del grid
 
 ¡Tu portafolio está listo para despegar! 🎉

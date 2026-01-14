@@ -1,70 +1,132 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio de [Tu Nombre] - Desarrollador Full Stack">
-    <title>Inicio - Portfolio Developer</title>
-    
+    <meta name="description" content="Rodrigo Trejo Portfolio - Data Scientist & Engineer">
+    <title>Home - Rodrigo Trejo Portfolio</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rodrigo-trejo-hdz.github.io/">
+    <meta property="og:title" content="Rodrigo Trejo - Data Scientist Portfolio">
+    <meta property="og:description" content="Data Scientist specialized in ML, Power BI, and cloud analytics. View my projects and certifications.">
+    <meta property="og:image" content="https://rodrigo-trejo-hdz.github.io/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rodrigo-trejo-hdz.github.io/">
+    <meta property="twitter:title" content="Rodrigo Trejo - Data Scientist">
+    <meta property="twitter:description" content="Data Scientist specialized in ML, Power BI, and cloud analytics.">
+    <meta property="twitter:image" content="https://rodrigo-trejo-hdz.github.io/assets/images/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2YY6B3ZL1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F2YY6B3ZL1');
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Rodrigo Iván Trejo Hernández",
+      "jobTitle": "Data Scientist",
+      "url": "https://rodrigo-trejo-hdz.github.io/",
+      "sameAs": [
+        "https://www.linkedin.com/in/rodrigo-iv%C3%A1n-trejo-hern%C3%A1ndez-300bba249/",
+        "https://github.com/Rodrigo-Trejo-Hdz"
+      ],
+      "knowsAbout": ["Python", "SQL", "Power BI", "Machine Learning", "AWS", "MATLAB", "C++", "Excel", "Simulink", "React", "Wolfram", "TIA Portal", "Fusion 360"],
+      "email": "idm.rodrigo.trejo@gmail.com",
+      "alumniOf": "ITAM",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Estado de México",
+        "addressCountry": "MX"
+      }
+    }
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- NAVEGACIÓN -->
+    <!-- NAVIGATION -->
     <nav>
         <a href="index.html" class="logo">&lt;/Dev&gt;</a>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="cursos.html">Cursos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="proyectos.html">Projects</a></li>
+            <li><a href="cursos.html">Certifications</a></li>
+            <li><a href="contacto.html">Contact</a></li>
+            <li><a href="servicios.html">Services</a></li>
+            <li>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
+            </li>
         </ul>
     </nav>
 
-    <!-- CONTENIDO PRINCIPAL -->
+    <!-- MAIN CONTENT -->
     <div class="container">
         <section class="hero-section">
-            <!-- Contenido del Hero -->
+            <!-- Hero Content -->
             <div class="hero-content">
-                <div class="greeting">HOLA, SOY</div>
+                <div class="greeting">HI, I'M</div>
                 <h1>Rodrigo Trejo<br><span>Data Scientist</span></h1>
-                <p class="subtitle">Creando <span>experiencias digitales</span> excepcionales</p>
+                <p class="subtitle">Creating <span>data-driven solutions</span> that make an impact</p>
                 <p class="hero-description">
-                    Desarrollador Full Stack apasionado por transformar ideas en soluciones tecnológicas innovadoras. 
-                    Especializado en crear aplicaciones web modernas, escalables y de alto rendimiento.
+                    Data Scientist passionate about transforming complex data into actionable insights.
+                    Specialized in machine learning, business intelligence, and cloud-based analytics solutions.
                 </p>
-                
-                <!-- Tags de habilidades -->
+
+                <!-- Skills tags -->
                 <div class="skills-tags">
-                    <div class="skill-tag">JavaScript / TypeScript</div>
-                    <div class="skill-tag">React / Next.js</div>
-                    <div class="skill-tag">Node.js</div>
                     <div class="skill-tag">Python</div>
-                    <div class="skill-tag">Cloud (AWS/Azure)</div>
-                    <div class="skill-tag">UI/UX Design</div>
+                    <div class="skill-tag">SQL</div>
+                    <div class="skill-tag">Power BI</div>
+                    <div class="skill-tag">AWS</div>
+                    <div class="skill-tag">MATLAB</div>
+                    <div class="skill-tag">C++</div>
+                    <div class="skill-tag">Excel</div>
+                    <div class="skill-tag">Simulink</div>
+                    <div class="skill-tag">React</div>
+                    <div class="skill-tag">Wolfram</div>
+                    <div class="skill-tag">TIA Portal</div>
+                    <div class="skill-tag">Fusion 360</div>
                 </div>
 
-                <!-- Botones de acción -->
+                <!-- Action buttons -->
                 <div class="cta-buttons">
-                    <a href="proyectos.html" class="btn btn-primary">Ver Proyectos</a>
-                    <a href="contacto.html" class="btn btn-secondary">Contactar</a>
+                    <a href="proyectos.html" class="btn btn-primary">View Projects</a>
+                    <a href="contacto.html" class="btn btn-secondary">Contact</a>
                 </div>
             </div>
 
-            <!-- Visual del Hero -->
+            <!-- Hero Visual -->
             <div class="hero-visual">
                 <div class="hero-shape">
                     <div class="shape-hexagon">
-                        <!-- Puedes reemplazar el emoji con una imagen -->
+                        <!-- You can replace emoji with an image -->
                         💻
-                        <!-- O usar una imagen: -->
-                        <!-- <img src="assets/images/profile.jpg" alt="Profile"> -->
+                        <!-- Or use an image: -->
+                        <!-- <img src="assets/images/profile.png" alt="Profile"> -->
                     </div>
                     <div class="code-decoration">&lt;code/&gt;</div>
                     <div class="code-decoration">{...}</div>

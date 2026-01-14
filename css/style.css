@@ -2,6 +2,7 @@
    VARIABLES GLOBALES
    ===================== */
 :root {
+    /* Dark Theme (Default) */
     --primary-color: #00f5ff;
     --secondary-color: #9d4edd;
     --accent-color: #ff006e;
@@ -9,6 +10,25 @@
     --bg-card: #151b3d;
     --text-light: #ffffff;
     --text-gray: #a8b2d1;
+    --nav-bg: rgba(10, 14, 39, 0.8);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --gradient-1: rgba(157, 78, 221, 0.15);
+    --gradient-2: rgba(0, 245, 255, 0.15);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    --primary-color: #0066cc;
+    --secondary-color: #7209b7;
+    --accent-color: #d90368;
+    --bg-dark: #f5f7fa;
+    --bg-card: #ffffff;
+    --text-light: #1a1a2e;
+    --text-gray: #4a5568;
+    --nav-bg: rgba(255, 255, 255, 0.9);
+    --border-color: rgba(0, 0, 0, 0.1);
+    --gradient-1: rgba(114, 9, 183, 0.05);
+    --gradient-2: rgba(0, 102, 204, 0.05);
 }
 
 /* =====================
@@ -36,10 +56,11 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at top, rgba(157, 78, 221, 0.15), transparent 50%),
-                radial-gradient(ellipse at bottom, rgba(0, 245, 255, 0.15), transparent 50%);
+    background: radial-gradient(ellipse at top, var(--gradient-1), transparent 50%),
+                radial-gradient(ellipse at bottom, var(--gradient-2), transparent 50%);
     pointer-events: none;
     z-index: 0;
+    transition: background 0.3s ease;
 }
 
 /* =====================
@@ -50,13 +71,14 @@ nav {
     top: 0;
     width: 100%;
     padding: 1.5rem 5%;
-    background: rgba(10, 14, 39, 0.8);
+    background: var(--nav-bg);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--border-color);
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .logo {
@@ -1201,5 +1223,123 @@ h2 {
 
     .shape-hexagon {
         font-size: 4rem;
+    }
+}
+
+/* =====================
+   THEME TOGGLE BUTTON
+   ===================== */
+.theme-toggle {
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+}
+
+.theme-toggle-icon {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover .theme-toggle-icon {
+    transform: rotate(20deg);
+}
+
+/* Ajustar navegación para incluir toggle */
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1001;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* =====================
+   PROJECT FILTERS
+   ===================== */
+.project-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+    padding: 0 1rem;
+}
+
+.filter-btn {
+    background: var(--bg-card);
+    color: var(--text-gray);
+    border: 2px solid var(--border-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 245, 255, 0.2);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 5px 20px rgba(0, 245, 255, 0.4);
+}
+
+.filter-btn.active:hover {
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Animación de filtrado */
+.project-card {
+    transition: all 0.4s ease;
+}
+
+.project-card.hide {
+    opacity: 0;
+    transform: scale(0.8);
+    position: absolute;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .project-filters {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
     }
 }

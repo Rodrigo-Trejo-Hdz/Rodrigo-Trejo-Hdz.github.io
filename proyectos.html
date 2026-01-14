@@ -1,59 +1,102 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proyectos de [Tu Nombre] - Portfolio Developer">
-    <title>Proyectos - Portfolio Developer</title>
-    
+    <meta name="description" content="Projects by Rodrigo Trejo - Data Scientist Portfolio">
+    <title>Projects - Rodrigo Trejo Portfolio</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rodrigo-trejo-hdz.github.io/proyectos.html">
+    <meta property="og:title" content="Projects - Rodrigo Trejo Portfolio">
+    <meta property="og:description" content="Explore my data science and engineering projects. Python, ML, Power BI, and more.">
+    <meta property="og:image" content="https://rodrigo-trejo-hdz.github.io/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rodrigo-trejo-hdz.github.io/proyectos.html">
+    <meta property="twitter:title" content="Projects - Rodrigo Trejo">
+    <meta property="twitter:description" content="Data science and engineering projects portfolio.">
+    <meta property="twitter:image" content="https://rodrigo-trejo-hdz.github.io/assets/images/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2YY6B3ZL1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F2YY6B3ZL1');
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- NAVEGACIÓN -->
+    <!-- NAVIGATION -->
     <nav>
         <a href="index.html" class="logo">&lt;/Dev&gt;</a>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="cursos.html">Cursos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="proyectos.html">Projects</a></li>
+            <li><a href="cursos.html">Certifications</a></li>
+            <li><a href="contacto.html">Contact</a></li>
+            <li><a href="servicios.html">Services</a></li>
+            <li>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
+            </li>
         </ul>
     </nav>
 
-    <!-- CONTENIDO PRINCIPAL -->
+    <!-- MAIN CONTENT -->
     <div class="container">
-        <!-- Encabezado de la sección -->
+        <!-- Section Header -->
         <div class="section-header">
-            <div class="section-number">02. PORTAFOLIO</div>
-            <h2>Proyectos Destacados</h2>
+            <div class="section-number">01. PORTFOLIO</div>
+            <h2>Featured Projects</h2>
             <p class="section-description">
-                Una selección de mis trabajos más recientes y significativos
+                A selection of my most recent and significant work
             </p>
         </div>
 
-        <!-- Grid de proyectos -->
+        <!-- Project Filters -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+            <button class="filter-btn" data-filter="data">Data Science</button>
+            <button class="filter-btn" data-filter="ai">AI/ML</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+
+        <!-- Projects Grid -->
         <div class="projects-grid">
-            
-            <!-- Proyecto 1 -->
-            <div class="project-card">
+
+            <!-- Project 1 -->
+            <div class="project-card" data-category="web">
                 <div class="project-image-container">
-                    <!-- Puedes usar un emoji o una imagen -->
+                    <!-- You can use an emoji or an image -->
                     🚀
-                    <!-- O usar una imagen: -->
+                    <!-- Or use an image: -->
                     <!-- <img src="assets/images/proyecto1.jpg" alt="E-Commerce Platform"> -->
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">E-Commerce Platform</h3>
                     <p class="project-description">
-                        Plataforma completa de comercio electrónico con carrito de compras, sistema de pagos integrado, 
-                        panel de administración y análisis en tiempo real.
+                        Complete e-commerce platform with shopping cart, integrated payment system,
+                        admin panel, and real-time analytics.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">React</span>
@@ -61,7 +104,7 @@
                         <span class="tech-badge">MongoDB</span>
                         <span class="tech-badge">Stripe</span>
                     </div>
-                    <div class="project-code">// Implementación del carrito
+                    <div class="project-code">// Cart implementation
 const addToCart = (product) => {
   dispatch({
     type: 'ADD_TO_CART',
@@ -71,13 +114,13 @@ const addToCart = (product) => {
 }</div>
                     <div class="project-links">
                         <a href="https://github.com/tuusuario/proyecto1" target="_blank" class="project-link">GitHub</a>
-                        <a href="https://proyecto1.com" target="_blank" class="project-link">Demo Live</a>
+                        <a href="https://proyecto1.com" target="_blank" class="project-link">Live Demo</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto 2 -->
-            <div class="project-card">
+            <!-- Project 2 -->
+            <div class="project-card" data-category="mobile">
                 <div class="project-image-container" style="background: linear-gradient(135deg, #ff006e, #8338ec);">
                     📱
                     <!-- <img src="assets/images/proyecto2.jpg" alt="Task Manager App"> -->
@@ -85,15 +128,15 @@ const addToCart = (product) => {
                 <div class="project-info">
                     <h3 class="project-title">Task Manager App</h3>
                     <p class="project-description">
-                        Aplicación móvil multiplataforma para gestión de tareas con sincronización en la nube, 
-                        notificaciones inteligentes y colaboración en equipo.
+                        Cross-platform mobile app for task management with cloud sync,
+                        smart notifications, and team collaboration.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">React Native</span>
                         <span class="tech-badge">Firebase</span>
                         <span class="tech-badge">Redux</span>
                     </div>
-                    <div class="project-code">// Sistema de notificaciones
+                    <div class="project-code">// Notification system
 const scheduleNotification = async (task) => {
   await Notifications.scheduleAsync({
     content: { title: task.title },
@@ -102,13 +145,13 @@ const scheduleNotification = async (task) => {
 }</div>
                     <div class="project-links">
                         <a href="https://github.com/tuusuario/proyecto2" target="_blank" class="project-link">GitHub</a>
-                        <a href="https://proyecto2.com" target="_blank" class="project-link">Demo Live</a>
+                        <a href="https://proyecto2.com" target="_blank" class="project-link">Live Demo</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto 3 -->
-            <div class="project-card">
+            <!-- Project 3 -->
+            <div class="project-card" data-category="data">
                 <div class="project-image-container" style="background: linear-gradient(135deg, #06ffa5, #00d4ff);">
                     🎮
                     <!-- <img src="assets/images/proyecto3.jpg" alt="Real-Time Dashboard"> -->
@@ -116,8 +159,8 @@ const scheduleNotification = async (task) => {
                 <div class="project-info">
                     <h3 class="project-title">Real-Time Dashboard</h3>
                     <p class="project-description">
-                        Dashboard analítico con visualización de datos en tiempo real, métricas personalizables 
-                        y sistema de alertas automatizado.
+                        Analytics dashboard with real-time data visualization, customizable metrics,
+                        and automated alert system.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">Vue.js</span>
@@ -132,13 +175,13 @@ ws.onmessage = (event) => {
 }</div>
                     <div class="project-links">
                         <a href="https://github.com/tuusuario/proyecto3" target="_blank" class="project-link">GitHub</a>
-                        <a href="https://proyecto3.com" target="_blank" class="project-link">Demo Live</a>
+                        <a href="https://proyecto3.com" target="_blank" class="project-link">Live Demo</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto 4 - Ejemplo adicional -->
-            <div class="project-card">
+            <!-- Project 4 - Additional example -->
+            <div class="project-card" data-category="ai">
                 <div class="project-image-container" style="background: linear-gradient(135deg, #ffd60a, #ff006e);">
                     🤖
                     <!-- <img src="assets/images/proyecto4.jpg" alt="AI Chatbot"> -->
@@ -146,8 +189,8 @@ ws.onmessage = (event) => {
                 <div class="project-info">
                     <h3 class="project-title">AI Chatbot</h3>
                     <p class="project-description">
-                        Chatbot inteligente con procesamiento de lenguaje natural, integración con múltiples APIs 
-                        y aprendizaje continuo.
+                        Intelligent chatbot with natural language processing, multiple API integrations,
+                        and continuous learning capabilities.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">Python</span>
@@ -161,13 +204,13 @@ def process_message(text):
     return decode_response(response)</div>
                     <div class="project-links">
                         <a href="https://github.com/tuusuario/proyecto4" target="_blank" class="project-link">GitHub</a>
-                        <a href="https://proyecto4.com" target="_blank" class="project-link">Demo Live</a>
+                        <a href="https://proyecto4.com" target="_blank" class="project-link">Live Demo</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto 5 - Ejemplo adicional -->
-            <div class="project-card">
+            <!-- Project 5 - Additional example -->
+            <div class="project-card" data-category="design">
                 <div class="project-image-container" style="background: linear-gradient(135deg, #4cc9f0, #7209b7);">
                     🎨
                     <!-- <img src="assets/images/proyecto5.jpg" alt="Design System"> -->
@@ -175,8 +218,8 @@ def process_message(text):
                 <div class="project-info">
                     <h3 class="project-title">Design System</h3>
                     <p class="project-description">
-                        Sistema de diseño completo con componentes reutilizables, documentación interactiva 
-                        y tokens de diseño configurables.
+                        Complete design system with reusable components, interactive documentation,
+                        and configurable design tokens.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">React</span>
@@ -191,13 +234,13 @@ export const Button = styled.button`
 `;</div>
                     <div class="project-links">
                         <a href="https://github.com/tuusuario/proyecto5" target="_blank" class="project-link">GitHub</a>
-                        <a href="https://proyecto5.com" target="_blank" class="project-link">Demo Live</a>
+                        <a href="https://proyecto5.com" target="_blank" class="project-link">Live Demo</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto 6 - Ejemplo adicional -->
-            <div class="project-card">
+            <!-- Project 6 - Additional example -->
+            <div class="project-card" data-category="data">
                 <div class="project-image-container" style="background: linear-gradient(135deg, #06ffa5, #ffd60a);">
                     📊
                     <!-- <img src="assets/images/proyecto6.jpg" alt="Analytics Platform"> -->
@@ -205,8 +248,8 @@ export const Button = styled.button`
                 <div class="project-info">
                     <h3 class="project-title">Analytics Platform</h3>
                     <p class="project-description">
-                        Plataforma de análisis de datos con visualizaciones interactivas, reportes automatizados 
-                        y machine learning para predicciones.
+                        Data analytics platform with interactive visualizations, automated reports,
+                        and machine learning for predictions.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">Python</span>
@@ -222,7 +265,7 @@ insights = df.groupby('category')
   .sort_values(descending=True)</div>
                     <div class="project-links">
                         <a href="https://github.com/tuusuario/proyecto6" target="_blank" class="project-link">GitHub</a>
-                        <a href="https://proyecto6.com" target="_blank" class="project-link">Demo Live</a>
+                        <a href="https://proyecto6.com" target="_blank" class="project-link">Live Demo</a>
                     </div>
                 </div>
             </div>

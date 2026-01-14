@@ -127,3 +127,100 @@ if (document.readyState === 'loading') {
 } else {
     createMobileMenu();
 }
+
+// =====================
+// THEME TOGGLE (Light/Dark Mode)
+// =====================
+function initThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.querySelector('.theme-toggle-icon');
+    const htmlElement = document.documentElement;
+
+    // Verificar si el elemento existe
+    if (!themeToggle) return;
+
+    // Cargar el tema guardado en localStorage
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    htmlElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    // Toggle al hacer click
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+
+    // Actualizar el ícono según el tema
+    function updateThemeIcon(theme) {
+        if (themeIcon) {
+            themeIcon.textContent = theme === 'dark' ? '🌙' : '☀️';
+        }
+    }
+}
+
+// Inicializar theme toggle cuando el DOM esté listo
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initThemeToggle);
+} else {
+    initThemeToggle();
+}
+
+// =====================
+// PROJECT FILTERS
+// =====================
+function initProjectFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    // Si no hay filtros en la página, salir
+    if (filterButtons.length === 0) return;
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filterValue = this.getAttribute('data-filter');
+
+            // Actualizar botones activos
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            // Filtrar proyectos
+            projectCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+
+                if (filterValue === 'all' || cardCategory === filterValue) {
+                    card.classList.remove('hide');
+                    card.style.display = 'block';
+                } else {
+                    card.classList.add('hide');
+                    // Esperar a que termine la animación antes de ocultar
+                    setTimeout(() => {
+                        if (card.classList.contains('hide')) {
+                            card.style.display = 'none';
+                        }
+                    }, 400);
+                }
+            });
+
+            // Reorganizar el grid después del filtro
+            setTimeout(() => {
+                const projectsGrid = document.querySelector('.projects-grid');
+                if (projectsGrid) {
+                    projectsGrid.style.display = 'none';
+                    projectsGrid.offsetHeight; // Force reflow
+                    projectsGrid.style.display = 'grid';
+                }
+            }, 450);
+        });
+    });
+}
+
+// Inicializar project filters cuando el DOM esté listo
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initProjectFilters);
+} else {
+    initProjectFilters();
+}

@@ -1,71 +1,104 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Servicios de desarrollo y análisis de datos - Portfolio Developer">
-    <title>Servicios - Portfolio Developer</title>
-    
+    <meta name="description" content="Development and Data Analytics Services - Rodrigo Trejo Portfolio">
+    <title>Services - Rodrigo Trejo Portfolio</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rodrigo-trejo-hdz.github.io/servicios.html">
+    <meta property="og:title" content="Services - Rodrigo Trejo Portfolio">
+    <meta property="og:description" content="Data analysis, Power BI dashboards, ML solutions, and web development services.">
+    <meta property="og:image" content="https://rodrigo-trejo-hdz.github.io/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rodrigo-trejo-hdz.github.io/servicios.html">
+    <meta property="twitter:title" content="Services - Rodrigo Trejo">
+    <meta property="twitter:description" content="Professional data science and development services.">
+    <meta property="twitter:image" content="https://rodrigo-trejo-hdz.github.io/assets/images/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2YY6B3ZL1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F2YY6B3ZL1');
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- NAVEGACIÓN -->
+    <!-- NAVIGATION -->
     <nav>
         <a href="index.html" class="logo">&lt;/Dev&gt;</a>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="cursos.html">Cursos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="proyectos.html">Projects</a></li>
+            <li><a href="cursos.html">Certifications</a></li>
+            <li><a href="contacto.html">Contact</a></li>
+            <li><a href="servicios.html">Services</a></li>
+            <li>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
+            </li>
         </ul>
     </nav>
 
-    <!-- CONTENIDO PRINCIPAL -->
+    <!-- MAIN CONTENT -->
     <div class="container">
-        <!-- Encabezado de la sección -->
+        <!-- Section Header -->
         <div class="section-header">
-            <div class="section-number">03. FREELANCE</div>
-            <h2>Mis Servicios</h2>
+            <div class="section-number">04. FREELANCE</div>
+            <h2>My Services</h2>
             <p class="section-description">
-                Soluciones tecnológicas personalizadas para tu negocio
+                Custom technology solutions for your business
             </p>
         </div>
 
-        <!-- Grid de servicios -->
+        <!-- Services Grid -->
         <div class="services-grid">
-            
-            <!-- Servicio 1: Análisis y Limpieza de Datos -->
+
+            <!-- Service 1: Data Analysis and Cleaning -->
             <div class="service-card">
                 <div class="service-icon-wrapper">
                     <div class="service-icon">📊</div>
                 </div>
                 <div class="service-content">
-                    <h3 class="service-title">Análisis y Limpieza de Datos</h3>
+                    <h3 class="service-title">Data Analysis and Cleaning</h3>
                     <p class="service-description">
-                        Transformo datos crudos en información valiosa. Limpieza, análisis exploratorio, 
-                        identificación de patrones y generación de insights accionables para tu negocio.
+                        I transform raw data into valuable insights. Data cleaning, exploratory analysis,
+                        pattern identification, and actionable insights generation for your business.
                     </p>
-                    
+
                     <div class="service-features">
-                        <h4>¿Qué incluye?</h4>
+                        <h4>What's included?</h4>
                         <ul>
-                            <li>Limpieza y preparación de datasets</li>
-                            <li>Análisis estadístico descriptivo</li>
-                            <li>Identificación de outliers y anomalías</li>
-                            <li>Visualizaciones interactivas</li>
-                            <li>Documentación del proceso</li>
+                            <li>Dataset cleaning and preparation</li>
+                            <li>Descriptive statistical analysis</li>
+                            <li>Outlier and anomaly identification</li>
+                            <li>Interactive visualizations</li>
+                            <li>Process documentation</li>
                         </ul>
                     </div>
 
                     <div class="service-tools">
-                        <h4>Herramientas</h4>
+                        <h4>Tools</h4>
                         <div class="tools-list">
                             <span class="tool-badge">Python</span>
                             <span class="tool-badge">Pandas</span>
@@ -77,44 +110,44 @@
 
                     <div class="service-pricing">
                         <div class="pricing-option">
-                            <div class="pricing-label">Por Hora</div>
+                            <div class="pricing-label">Per Hour</div>
                             <div class="pricing-value">$25 - $40 USD</div>
                         </div>
-                        <div class="pricing-divider">o</div>
+                        <div class="pricing-divider">or</div>
                         <div class="pricing-option">
-                            <div class="pricing-label">Proyecto</div>
-                            <div class="pricing-value">Desde $500 USD</div>
+                            <div class="pricing-label">Project</div>
+                            <div class="pricing-value">From $500 USD</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Servicio 2: Desarrollo UI/UX -->
+            <!-- Service 2: UI/UX Development -->
             <div class="service-card featured">
-                <div class="featured-badge">Más Popular</div>
+                <div class="featured-badge">Most Popular</div>
                 <div class="service-icon-wrapper">
                     <div class="service-icon">🎨</div>
                 </div>
                 <div class="service-content">
-                    <h3 class="service-title">Desarrollo UI/UX</h3>
+                    <h3 class="service-title">UI/UX Development</h3>
                     <p class="service-description">
-                        Diseño y desarrollo de interfaces de usuario modernas, intuitivas y responsivas. 
-                        Creo experiencias digitales que convierten visitantes en clientes.
+                        Design and development of modern, intuitive, and responsive user interfaces.
+                        I create digital experiences that convert visitors into customers.
                     </p>
-                    
+
                     <div class="service-features">
-                        <h4>¿Qué incluye?</h4>
+                        <h4>What's included?</h4>
                         <ul>
-                            <li>Diseño de wireframes y prototipos</li>
-                            <li>Desarrollo frontend responsive</li>
-                            <li>Optimización de UX</li>
-                            <li>Testing en múltiples dispositivos</li>
-                            <li>Animaciones y transiciones</li>
+                            <li>Wireframe and prototype design</li>
+                            <li>Responsive frontend development</li>
+                            <li>UX optimization</li>
+                            <li>Cross-device testing</li>
+                            <li>Animations and transitions</li>
                         </ul>
                     </div>
 
                     <div class="service-tools">
-                        <h4>Herramientas</h4>
+                        <h4>Tools</h4>
                         <div class="tools-list">
                             <span class="tool-badge">React</span>
                             <span class="tool-badge">Figma</span>
@@ -126,43 +159,43 @@
 
                     <div class="service-pricing">
                         <div class="pricing-option">
-                            <div class="pricing-label">Por Hora</div>
+                            <div class="pricing-label">Per Hour</div>
                             <div class="pricing-value">$30 - $50 USD</div>
                         </div>
-                        <div class="pricing-divider">o</div>
+                        <div class="pricing-divider">or</div>
                         <div class="pricing-option">
-                            <div class="pricing-label">Proyecto</div>
-                            <div class="pricing-value">Desde $800 USD</div>
+                            <div class="pricing-label">Project</div>
+                            <div class="pricing-value">From $800 USD</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Servicio 3: Reportes y Automatización con Power BI -->
+            <!-- Service 3: Reporting and Automation with Power BI -->
             <div class="service-card">
                 <div class="service-icon-wrapper">
                     <div class="service-icon">📈</div>
                 </div>
                 <div class="service-content">
-                    <h3 class="service-title">Reportes y Automatización</h3>
+                    <h3 class="service-title">Reporting and Automation</h3>
                     <p class="service-description">
-                        Creo dashboards interactivos y automatizo procesos de reporting. Visualiza tus KPIs 
-                        en tiempo real y toma decisiones basadas en datos.
+                        I create interactive dashboards and automate reporting processes. Visualize your KPIs
+                        in real-time and make data-driven decisions.
                     </p>
-                    
+
                     <div class="service-features">
-                        <h4>¿Qué incluye?</h4>
+                        <h4>What's included?</h4>
                         <ul>
-                            <li>Dashboards interactivos en Power BI</li>
-                            <li>Conexión a múltiples fuentes de datos</li>
-                            <li>Automatización de reportes periódicos</li>
-                            <li>Visualizaciones personalizadas</li>
-                            <li>Capacitación en uso de herramientas</li>
+                            <li>Interactive Power BI dashboards</li>
+                            <li>Multiple data source connections</li>
+                            <li>Periodic report automation</li>
+                            <li>Custom visualizations</li>
+                            <li>Tool usage training</li>
                         </ul>
                     </div>
 
                     <div class="service-tools">
-                        <h4>Herramientas</h4>
+                        <h4>Tools</h4>
                         <div class="tools-list">
                             <span class="tool-badge">Power BI</span>
                             <span class="tool-badge">DAX</span>
@@ -174,43 +207,43 @@
 
                     <div class="service-pricing">
                         <div class="pricing-option">
-                            <div class="pricing-label">Por Hora</div>
+                            <div class="pricing-label">Per Hour</div>
                             <div class="pricing-value">$28 - $45 USD</div>
                         </div>
-                        <div class="pricing-divider">o</div>
+                        <div class="pricing-divider">or</div>
                         <div class="pricing-option">
-                            <div class="pricing-label">Proyecto</div>
-                            <div class="pricing-value">Desde $600 USD</div>
+                            <div class="pricing-label">Project</div>
+                            <div class="pricing-value">From $600 USD</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Servicio 4: Desarrollo Web Full Stack -->
+            <!-- Service 4: Full Stack Web Development -->
             <div class="service-card">
                 <div class="service-icon-wrapper">
                     <div class="service-icon">💻</div>
                 </div>
                 <div class="service-content">
-                    <h3 class="service-title">Desarrollo Web Full Stack</h3>
+                    <h3 class="service-title">Full Stack Web Development</h3>
                     <p class="service-description">
-                        Desarrollo completo de aplicaciones web desde el frontend hasta el backend. 
-                        Soluciones escalables, seguras y optimizadas para tu negocio.
+                        Complete web application development from frontend to backend.
+                        Scalable, secure, and optimized solutions for your business.
                     </p>
-                    
+
                     <div class="service-features">
-                        <h4>¿Qué incluye?</h4>
+                        <h4>What's included?</h4>
                         <ul>
-                            <li>Desarrollo frontend y backend</li>
-                            <li>APIs RESTful</li>
-                            <li>Integración de bases de datos</li>
-                            <li>Autenticación y seguridad</li>
-                            <li>Deploy y mantenimiento</li>
+                            <li>Frontend and backend development</li>
+                            <li>RESTful APIs</li>
+                            <li>Database integration</li>
+                            <li>Authentication and security</li>
+                            <li>Deployment and maintenance</li>
                         </ul>
                     </div>
 
                     <div class="service-tools">
-                        <h4>Herramientas</h4>
+                        <h4>Tools</h4>
                         <div class="tools-list">
                             <span class="tool-badge">React</span>
                             <span class="tool-badge">Node.js</span>
@@ -222,43 +255,43 @@
 
                     <div class="service-pricing">
                         <div class="pricing-option">
-                            <div class="pricing-label">Por Hora</div>
+                            <div class="pricing-label">Per Hour</div>
                             <div class="pricing-value">$35 - $60 USD</div>
                         </div>
-                        <div class="pricing-divider">o</div>
+                        <div class="pricing-divider">or</div>
                         <div class="pricing-option">
-                            <div class="pricing-label">Proyecto</div>
-                            <div class="pricing-value">Desde $1,500 USD</div>
+                            <div class="pricing-label">Project</div>
+                            <div class="pricing-value">From $1,500 USD</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Servicio 5: Automatización de Procesos -->
+            <!-- Service 5: Process Automation -->
             <div class="service-card">
                 <div class="service-icon-wrapper">
                     <div class="service-icon">⚙️</div>
                 </div>
                 <div class="service-content">
-                    <h3 class="service-title">Automatización de Procesos</h3>
+                    <h3 class="service-title">Process Automation</h3>
                     <p class="service-description">
-                        Automatizo tareas repetitivas y procesos empresariales. Ahorra tiempo y reduce errores 
-                        con scripts y herramientas personalizadas.
+                        I automate repetitive tasks and business processes. Save time and reduce errors
+                        with custom scripts and tools.
                     </p>
-                    
+
                     <div class="service-features">
-                        <h4>¿Qué incluye?</h4>
+                        <h4>What's included?</h4>
                         <ul>
-                            <li>Análisis de procesos actuales</li>
-                            <li>Scripts de automatización personalizados</li>
-                            <li>Integración con APIs</li>
-                            <li>Web scraping y ETL</li>
-                            <li>Documentación y capacitación</li>
+                            <li>Current process analysis</li>
+                            <li>Custom automation scripts</li>
+                            <li>API integration</li>
+                            <li>Web scraping and ETL</li>
+                            <li>Documentation and training</li>
                         </ul>
                     </div>
 
                     <div class="service-tools">
-                        <h4>Herramientas</h4>
+                        <h4>Tools</h4>
                         <div class="tools-list">
                             <span class="tool-badge">Python</span>
                             <span class="tool-badge">Selenium</span>
@@ -270,60 +303,60 @@
 
                     <div class="service-pricing">
                         <div class="pricing-option">
-                            <div class="pricing-label">Por Hora</div>
+                            <div class="pricing-label">Per Hour</div>
                             <div class="pricing-value">$30 - $50 USD</div>
                         </div>
-                        <div class="pricing-divider">o</div>
+                        <div class="pricing-divider">or</div>
                         <div class="pricing-option">
-                            <div class="pricing-label">Proyecto</div>
-                            <div class="pricing-value">Desde $400 USD</div>
+                            <div class="pricing-label">Project</div>
+                            <div class="pricing-value">From $400 USD</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Servicio 6: Consultoría Técnica -->
+            <!-- Service 6: Technical Consulting -->
             <div class="service-card">
                 <div class="service-icon-wrapper">
                     <div class="service-icon">💡</div>
                 </div>
                 <div class="service-content">
-                    <h3 class="service-title">Consultoría Técnica</h3>
+                    <h3 class="service-title">Technical Consulting</h3>
                     <p class="service-description">
-                        Asesoramiento experto en arquitectura de software, selección de tecnologías 
-                        y mejores prácticas de desarrollo para tu proyecto.
+                        Expert consulting on software architecture, technology selection,
+                        and development best practices for your project.
                     </p>
-                    
+
                     <div class="service-features">
-                        <h4>¿Qué incluye?</h4>
+                        <h4>What's included?</h4>
                         <ul>
-                            <li>Auditoría de código y arquitectura</li>
-                            <li>Recomendaciones de tecnología</li>
-                            <li>Optimización de rendimiento</li>
-                            <li>Revisión de seguridad</li>
-                            <li>Planificación de roadmap técnico</li>
+                            <li>Code and architecture audit</li>
+                            <li>Technology recommendations</li>
+                            <li>Performance optimization</li>
+                            <li>Security review</li>
+                            <li>Technical roadmap planning</li>
                         </ul>
                     </div>
 
                     <div class="service-tools">
-                        <h4>Áreas de Expertise</h4>
+                        <h4>Expertise Areas</h4>
                         <div class="tools-list">
                             <span class="tool-badge">Cloud Computing</span>
                             <span class="tool-badge">DevOps</span>
-                            <span class="tool-badge">Arquitectura</span>
+                            <span class="tool-badge">Architecture</span>
                             <span class="tool-badge">Performance</span>
-                            <span class="tool-badge">Seguridad</span>
+                            <span class="tool-badge">Security</span>
                         </div>
                     </div>
 
                     <div class="service-pricing">
                         <div class="pricing-option">
-                            <div class="pricing-label">Por Hora</div>
+                            <div class="pricing-label">Per Hour</div>
                             <div class="pricing-value">$40 - $70 USD</div>
                         </div>
-                        <div class="pricing-divider">o</div>
+                        <div class="pricing-divider">or</div>
                         <div class="pricing-option">
-                            <div class="pricing-label">Sesión</div>
+                            <div class="pricing-label">Session</div>
                             <div class="pricing-value">$200 USD (2hrs)</div>
                         </div>
                     </div>
@@ -332,40 +365,40 @@
 
         </div>
 
-        <!-- Sección adicional: Proceso de trabajo -->
+        <!-- Additional section: Work process -->
         <div class="work-process-section">
-            <h2 class="process-title">¿Cómo Trabajamos Juntos?</h2>
+            <h2 class="process-title">How Do We Work Together?</h2>
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">01</div>
-                    <h3>Consulta Inicial</h3>
-                    <p>Conversamos sobre tu proyecto, necesidades y objetivos. Esta consulta es gratuita.</p>
+                    <h3>Initial Consultation</h3>
+                    <p>We discuss your project, needs, and objectives. This consultation is free.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">02</div>
-                    <h3>Propuesta</h3>
-                    <p>Preparo una propuesta detallada con alcance, timeline y presupuesto.</p>
+                    <h3>Proposal</h3>
+                    <p>I prepare a detailed proposal with scope, timeline, and budget.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">03</div>
-                    <h3>Desarrollo</h3>
-                    <p>Trabajo en tu proyecto con actualizaciones regulares y comunicación constante.</p>
+                    <h3>Development</h3>
+                    <p>I work on your project with regular updates and constant communication.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">04</div>
-                    <h3>Entrega</h3>
-                    <p>Entrego el proyecto completo con documentación y soporte post-entrega.</p>
+                    <h3>Delivery</h3>
+                    <p>I deliver the complete project with documentation and post-delivery support.</p>
                 </div>
             </div>
         </div>
 
-        <!-- CTA Final -->
+        <!-- Final CTA -->
         <div class="services-cta-section">
-            <h2>¿Listo para iniciar tu proyecto?</h2>
-            <p>Hablemos sobre cómo puedo ayudarte a alcanzar tus objetivos</p>
+            <h2>Ready to start your project?</h2>
+            <p>Let's talk about how I can help you achieve your goals</p>
             <div class="cta-buttons">
-                <a href="contacto.html" class="btn btn-primary">Contactar Ahora</a>
-                <a href="proyectos.html" class="btn btn-secondary">Ver Proyectos</a>
+                <a href="contacto.html" class="btn btn-primary">Contact Now</a>
+                <a href="proyectos.html" class="btn btn-secondary">View Projects</a>
             </div>
         </div>
     </div>

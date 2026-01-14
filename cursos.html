@@ -1,59 +1,92 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Certificaciones y cursos de [Tu Nombre] - Portfolio Developer">
-    <title>Cursos - Portfolio Developer</title>
-    
+    <meta name="description" content="Certifications and courses by Rodrigo Trejo - Data Scientist Portfolio">
+    <title>Certifications - Rodrigo Trejo Portfolio</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rodrigo-trejo-hdz.github.io/cursos.html">
+    <meta property="og:title" content="Certifications - Rodrigo Trejo Portfolio">
+    <meta property="og:description" content="Professional certifications in Power BI, Machine Learning, AWS, and more.">
+    <meta property="og:image" content="https://rodrigo-trejo-hdz.github.io/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rodrigo-trejo-hdz.github.io/cursos.html">
+    <meta property="twitter:title" content="Certifications - Rodrigo Trejo">
+    <meta property="twitter:description" content="Professional certifications and continuous learning.">
+    <meta property="twitter:image" content="https://rodrigo-trejo-hdz.github.io/assets/images/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2YY6B3ZL1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F2YY6B3ZL1');
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- NAVEGACIÓN -->
+    <!-- NAVIGATION -->
     <nav>
         <a href="index.html" class="logo">&lt;/Dev&gt;</a>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="cursos.html">Cursos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="proyectos.html">Projects</a></li>
+            <li><a href="cursos.html">Certifications</a></li>
+            <li><a href="contacto.html">Contact</a></li>
+            <li><a href="servicios.html">Services</a></li>
+            <li>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
+            </li>
         </ul>
     </nav>
 
-    <!-- CONTENIDO PRINCIPAL -->
+    <!-- MAIN CONTENT -->
     <div class="container">
-        <!-- Encabezado de la sección -->
+        <!-- Section Header -->
         <div class="section-header">
-            <div class="section-number">03. EDUCACIÓN</div>
-            <h2>Certificaciones</h2>
+            <div class="section-number">02. EDUCATION</div>
+            <h2>Certifications</h2>
             <p class="section-description">
-                Formación continua y certificaciones profesionales
+                Continuous learning and professional certifications
             </p>
         </div>
 
-        <!-- Lista de cursos -->
+        <!-- Courses List -->
         <div class="courses-container">
-            
-            <!-- Curso 1 -->
+
+            <!-- Course 1: Advanced Microsoft Power BI -->
             <div class="course-card">
                 <div class="course-header" onclick="toggleCourse(this)">
                     <div class="course-main-info">
-                        <h3 class="course-title-text">Full Stack Web Development</h3>
-                        <p class="course-institution">freeCodeCamp • 2024</p>
+                        <h3 class="course-title-text">Advanced Microsoft Power BI</h3>
+                        <p class="course-institution">Coursera • 2024</p>
                     </div>
                     <div class="course-actions">
-                        <a href="https://www.freecodecamp.org/certification/tuusuario/responsive-web-design" 
-                           class="course-link" 
-                           target="_blank" 
+                        <a href="https://www.coursera.org/verify/2J6PMS4FAGVF"
+                           class="course-link"
+                           target="_blank"
                            onclick="event.stopPropagation()">
-                            Ver Credencial
+                            View Credential
                         </a>
                         <div class="toggle-icon">▼</div>
                     </div>
@@ -62,44 +95,44 @@
                     <div class="course-details-content">
                         <div class="course-info-grid">
                             <div class="course-info-item">
-                                <div class="course-info-label">Duración</div>
-                                <div class="course-info-value">300 horas</div>
+                                <div class="course-info-label">Date</div>
+                                <div class="course-info-value">Nov 2024</div>
                             </div>
                             <div class="course-info-item">
-                                <div class="course-info-label">Modalidad</div>
+                                <div class="course-info-label">Format</div>
                                 <div class="course-info-value">Online</div>
                             </div>
                             <div class="course-info-item">
-                                <div class="course-info-label">Proyectos</div>
-                                <div class="course-info-value">15+</div>
+                                <div class="course-info-label">Level</div>
+                                <div class="course-info-value">Advanced</div>
                             </div>
                         </div>
-                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Habilidades Adquiridas</h4>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
                         <ul class="course-skills-list">
-                            <li>HTML5, CSS3 y JavaScript Moderno (ES6+)</li>
-                            <li>React y Redux para desarrollo frontend</li>
-                            <li>Node.js y Express para backend</li>
-                            <li>MongoDB y bases de datos NoSQL</li>
-                            <li>API REST y autenticación JWT</li>
-                            <li>Testing con Jest y Cypress</li>
+                            <li>Advanced data modeling in Power BI</li>
+                            <li>Advanced DAX (Data Analysis Expressions)</li>
+                            <li>Interactive visualizations and dashboards</li>
+                            <li>Power Query and data transformation</li>
+                            <li>Report performance optimization</li>
+                            <li>Azure and cloud services integration</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Curso 2 -->
+            <!-- Course 2: Machine Learning in Power BI -->
             <div class="course-card">
                 <div class="course-header" onclick="toggleCourse(this)">
                     <div class="course-main-info">
-                        <h3 class="course-title-text">Python for Data Science</h3>
-                        <p class="course-institution">Coursera • IBM • 2023</p>
+                        <h3 class="course-title-text">Complete Machine Learning Course in Microsoft Power BI</h3>
+                        <p class="course-institution">Coursera • 2024</p>
                     </div>
                     <div class="course-actions">
-                        <a href="https://www.coursera.org/account/accomplishments/certificate/EJEMPLO123" 
-                           class="course-link" 
-                           target="_blank" 
+                        <a href="https://coursera.org/share/914a9db6d159e79b4d9317e1b5fa6edb"
+                           class="course-link"
+                           target="_blank"
                            onclick="event.stopPropagation()">
-                            Ver Credencial
+                            View Credential
                         </a>
                         <div class="toggle-icon">▼</div>
                     </div>
@@ -108,43 +141,44 @@
                     <div class="course-details-content">
                         <div class="course-info-grid">
                             <div class="course-info-item">
-                                <div class="course-info-label">Duración</div>
-                                <div class="course-info-value">8 semanas</div>
+                                <div class="course-info-label">Date</div>
+                                <div class="course-info-value">Aug 2024</div>
                             </div>
                             <div class="course-info-item">
-                                <div class="course-info-label">Nivel</div>
-                                <div class="course-info-value">Intermedio</div>
+                                <div class="course-info-label">Format</div>
+                                <div class="course-info-value">Online</div>
                             </div>
                             <div class="course-info-item">
-                                <div class="course-info-label">Calificación</div>
-                                <div class="course-info-value">98%</div>
+                                <div class="course-info-label">Level</div>
+                                <div class="course-info-value">Intermediate</div>
                             </div>
                         </div>
-                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Habilidades Adquiridas</h4>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
                         <ul class="course-skills-list">
-                            <li>Análisis de datos con Pandas y NumPy</li>
-                            <li>Visualización con Matplotlib y Seaborn</li>
-                            <li>Machine Learning con Scikit-learn</li>
-                            <li>Limpieza y preprocesamiento de datos</li>
-                            <li>Estadística aplicada con Python</li>
+                            <li>ML model integration in Power BI</li>
+                            <li>Azure Machine Learning with Power BI</li>
+                            <li>Predictive analysis and forecasting</li>
+                            <li>ML results visualization</li>
+                            <li>AutoML and cognitive services</li>
+                            <li>Production model deployment</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Curso 3 -->
+            <!-- Course 3: Refresh Manager Power BI -->
             <div class="course-card">
                 <div class="course-header" onclick="toggleCourse(this)">
                     <div class="course-main-info">
-                        <h3 class="course-title-text">AWS Certified Cloud Practitioner</h3>
-                        <p class="course-institution">Amazon Web Services • 2023</p>
+                        <h3 class="course-title-text">Refresh Manager Power BI</h3>
+                        <p class="course-institution">Microsoft • 2025</p>
                     </div>
                     <div class="course-actions">
-                        <a href="https://aws.amazon.com/verification/EJEMPLO456" 
-                           class="course-link" 
-                           target="_blank" 
+                        <a href="https://learn.microsoft.com/api/achievements/share/en-us/RodrigoTrejo-1720/K6H532WB?sharingId=DE5E30B11550A1DE"
+                           class="course-link"
+                           target="_blank"
                            onclick="event.stopPropagation()">
-                            Ver Credencial
+                            View Credential
                         </a>
                         <div class="toggle-icon">▼</div>
                     </div>
@@ -153,44 +187,87 @@
                     <div class="course-details-content">
                         <div class="course-info-grid">
                             <div class="course-info-item">
-                                <div class="course-info-label">Preparación</div>
-                                <div class="course-info-value">3 meses</div>
+                                <div class="course-info-label">Date</div>
+                                <div class="course-info-value">May 2025</div>
                             </div>
                             <div class="course-info-item">
-                                <div class="course-info-label">Validez</div>
-                                <div class="course-info-value">3 años</div>
+                                <div class="course-info-label">Issuer</div>
+                                <div class="course-info-value">Microsoft Learn</div>
                             </div>
                             <div class="course-info-item">
-                                <div class="course-info-label">Score</div>
-                                <div class="course-info-value">875/1000</div>
+                                <div class="course-info-label">Level</div>
+                                <div class="course-info-value">Intermediate</div>
                             </div>
                         </div>
-                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Habilidades Adquiridas</h4>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
                         <ul class="course-skills-list">
-                            <li>Fundamentos de AWS Cloud Computing</li>
-                            <li>Arquitectura de soluciones en la nube</li>
-                            <li>Seguridad y cumplimiento en AWS</li>
-                            <li>Servicios principales: EC2, S3, RDS, Lambda</li>
-                            <li>Modelos de precios y facturación</li>
-                            <li>Mejores prácticas de migración</li>
+                            <li>Refresh schedule configuration</li>
+                            <li>Gateway and connection management</li>
+                            <li>Update time optimization</li>
+                            <li>Failed refresh troubleshooting</li>
+                            <li>Power BI Service administration</li>
+                            <li>Dataset monitoring and alerts</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Curso 4 - Ejemplo adicional -->
+            <!-- Course 4: Matlab AI (Multiple Courses) -->
             <div class="course-card">
                 <div class="course-header" onclick="toggleCourse(this)">
                     <div class="course-main-info">
-                        <h3 class="course-title-text">Advanced React and TypeScript</h3>
-                        <p class="course-institution">Udemy • 2024</p>
+                        <h3 class="course-title-text">Matlab AI - Specialization Track</h3>
+                        <p class="course-institution">Matlab onramp • 2023</p>
                     </div>
                     <div class="course-actions">
-                        <a href="https://www.udemy.com/certificate/UC-ejemplo789" 
-                           class="course-link" 
-                           target="_blank" 
+                        <span class="course-link" style="cursor: pointer;">
+                            View Courses (6 completed)
+                        </span>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                </div>
+                <div class="course-details">
+                    <div class="course-details-content">
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <div class="course-info-label">Date</div>
+                                <div class="course-info-value">May 2023</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Courses</div>
+                                <div class="course-info-value">6 Onramps</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Level</div>
+                                <div class="course-info-value">Intermediate-Advanced</div>
+                            </div>
+                        </div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Completed Courses</h4>
+                        <ul class="course-skills-list">
+                            <li>Matlab Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=acafcea5-33e5-4f33-aaf5-4809bc666a45&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
+                            <li>Simulink Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=24e497d7-abb0-4bd7-a156-afc836ac07e1&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
+                            <li>Machine Learning Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=4990ac83-205a-4a24-b473-dc2de588e5d9&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
+                            <li>Deep Learning Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=8b4b79bd-ae4a-4bc7-bc0b-f00485d259d9&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
+                            <li>Reinforcement Learning Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=92d22f73-aae2-4030-8477-a44672e41121&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
+                            <li>Computer Vision Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=5663da48-b7cc-4e8b-9fcf-0b84393d8d81&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 5: AWS Certified AI Practitioner Preparation -->
+            <div class="course-card">
+                <div class="course-header" onclick="toggleCourse(this)">
+                    <div class="course-main-info">
+                        <h3 class="course-title-text">AWS Certified AI Practitioner Preparation (AIF-C01)</h3>
+                        <p class="course-institution">Udemy • 2025</p>
+                    </div>
+                    <div class="course-actions">
+                        <a href="https://www.udemy.com/certificate/UC-50f88707-1d0d-4a55-b213-9acfc1cdf299/"
+                           class="course-link"
+                           target="_blank"
                            onclick="event.stopPropagation()">
-                            Ver Credencial
+                            View Credential
                         </a>
                         <div class="toggle-icon">▼</div>
                     </div>
@@ -199,44 +276,44 @@
                     <div class="course-details-content">
                         <div class="course-info-grid">
                             <div class="course-info-item">
-                                <div class="course-info-label">Duración</div>
-                                <div class="course-info-value">40 horas</div>
+                                <div class="course-info-label">Date</div>
+                                <div class="course-info-value">Sep 2025</div>
                             </div>
                             <div class="course-info-item">
-                                <div class="course-info-label">Nivel</div>
-                                <div class="course-info-value">Avanzado</div>
+                                <div class="course-info-label">Preparation</div>
+                                <div class="course-info-value">AWS Certification</div>
                             </div>
                             <div class="course-info-item">
-                                <div class="course-info-label">Rating</div>
-                                <div class="course-info-value">4.8/5.0</div>
+                                <div class="course-info-label">Level</div>
+                                <div class="course-info-value">Professional</div>
                             </div>
                         </div>
-                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Habilidades Adquiridas</h4>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
                         <ul class="course-skills-list">
-                            <li>TypeScript avanzado con React</li>
-                            <li>Patrones de diseño en React</li>
-                            <li>Optimización de rendimiento</li>
-                            <li>Testing con React Testing Library</li>
-                            <li>State management con Zustand y Jotai</li>
-                            <li>Server Components y RSC</li>
+                            <li>AI/ML fundamentals in AWS</li>
+                            <li>Amazon SageMaker and ML services</li>
+                            <li>AWS AI services (Rekognition, Comprehend, Lex)</li>
+                            <li>Responsible AI and best practices</li>
+                            <li>ML model deployment and monitoring</li>
+                            <li>Cloud AI solution architecture</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Curso 5 - Ejemplo adicional -->
+            <!-- Course 6: Amazon Bedrock Getting Started -->
             <div class="course-card">
                 <div class="course-header" onclick="toggleCourse(this)">
                     <div class="course-main-info">
-                        <h3 class="course-title-text">Docker and Kubernetes</h3>
-                        <p class="course-institution">Linux Foundation • 2023</p>
+                        <h3 class="course-title-text">Amazon Bedrock Getting Started</h3>
+                        <p class="course-institution">AWS Skill Builder • 2025</p>
                     </div>
                     <div class="course-actions">
-                        <a href="https://training.linuxfoundation.org/certification/verify" 
-                           class="course-link" 
-                           target="_blank" 
+                        <a href="assets/certificates/Amazon Bedrock Getting Started.pdf"
+                           class="course-link"
+                           target="_blank"
                            onclick="event.stopPropagation()">
-                            Ver Credencial
+                            View Certificate (PDF)
                         </a>
                         <div class="toggle-icon">▼</div>
                     </div>
@@ -245,26 +322,118 @@
                     <div class="course-details-content">
                         <div class="course-info-grid">
                             <div class="course-info-item">
-                                <div class="course-info-label">Duración</div>
-                                <div class="course-info-value">60 horas</div>
+                                <div class="course-info-label">Date</div>
+                                <div class="course-info-value">Dec 2025</div>
                             </div>
                             <div class="course-info-item">
-                                <div class="course-info-label">Tipo</div>
-                                <div class="course-info-value">Certificación</div>
+                                <div class="course-info-label">Issuer</div>
+                                <div class="course-info-value">AWS Training</div>
                             </div>
                             <div class="course-info-item">
-                                <div class="course-info-label">Nivel</div>
-                                <div class="course-info-value">Profesional</div>
+                                <div class="course-info-label">Level</div>
+                                <div class="course-info-value">Intermediate</div>
                             </div>
                         </div>
-                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Habilidades Adquiridas</h4>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
                         <ul class="course-skills-list">
-                            <li>Containerización con Docker</li>
-                            <li>Orquestación con Kubernetes</li>
-                            <li>Despliegue de aplicaciones escalables</li>
-                            <li>CI/CD con Jenkins y GitLab</li>
-                            <li>Monitoreo y logging</li>
-                            <li>Seguridad en contenedores</li>
+                            <li>Amazon Bedrock fundamentals</li>
+                            <li>LLM integration (Claude, Llama, etc.)</li>
+                            <li>Prompt engineering and optimization</li>
+                            <li>RAG (Retrieval Augmented Generation)</li>
+                            <li>Knowledge bases and vector stores</li>
+                            <li>Generative AI application deployment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 7: Bloomberg Finance Fundamentals -->
+            <div class="course-card">
+                <div class="course-header" onclick="toggleCourse(this)">
+                    <div class="course-main-info">
+                        <h3 class="course-title-text">Bloomberg Finance Fundamentals</h3>
+                        <p class="course-institution">Bloomberg • 2024</p>
+                    </div>
+                    <div class="course-actions">
+                        <a href="https://portal.bloombergforeducation.com/certificates/utT7optGQdKYdotN65nPXvs1"
+                           class="course-link"
+                           target="_blank"
+                           onclick="event.stopPropagation()">
+                            View Credential
+                        </a>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                </div>
+                <div class="course-details">
+                    <div class="course-details-content">
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <div class="course-info-label">Date</div>
+                                <div class="course-info-value">Jun 2024</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Format</div>
+                                <div class="course-info-value">Online</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Level</div>
+                                <div class="course-info-value">Professional</div>
+                            </div>
+                        </div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
+                        <ul class="course-skills-list">
+                            <li>Financial analysis and capital markets</li>
+                            <li>Bloomberg Terminal and professional tools</li>
+                            <li>Asset and derivatives valuation</li>
+                            <li>Fixed income and equity analysis</li>
+                            <li>Portfolio management</li>
+                            <li>Economic indicators and macroeconomic analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 8: Storyselling Course -->
+            <div class="course-card">
+                <div class="course-header" onclick="toggleCourse(this)">
+                    <div class="course-main-info">
+                        <h3 class="course-title-text">Storyselling Course</h3>
+                        <p class="course-institution">ITAM • 2024</p>
+                    </div>
+                    <div class="course-actions">
+                        <a href="https://www.credly.com/badges/a61822d8-781b-4b33-92b3-d96055907a20/public_url"
+                           class="course-link"
+                           target="_blank"
+                           onclick="event.stopPropagation()">
+                            View Credential
+                        </a>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                </div>
+                <div class="course-details">
+                    <div class="course-details-content">
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <div class="course-info-label">Date</div>
+                                <div class="course-info-value">Jul 2024</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Institution</div>
+                                <div class="course-info-value">ITAM</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Level</div>
+                                <div class="course-info-value">Professional</div>
+                            </div>
+                        </div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
+                        <ul class="course-skills-list">
+                            <li>Storytelling applied to sales and data</li>
+                            <li>Effective narrative for presentations</li>
+                            <li>Data insights communication</li>
+                            <li>Audience persuasion and engagement</li>
+                            <li>Narrative information visualization</li>
+                            <li>Executive presentation techniques</li>
                         </ul>
                     </div>
                 </div>
