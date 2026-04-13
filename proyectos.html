@@ -84,8 +84,46 @@
         <!-- Projects Grid -->
         <div class="projects-grid">
 
+            <!-- Project: Delivery Management Platform -->
+            <div class="project-card" data-category="web">
+                <div class="project-image-container" style="background: linear-gradient(135deg, #00f5ff, #9d4edd);">
+                    📅
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Delivery Management Platform</h3>
+                    <p class="project-description">
+                        Full-stack internal web app that replaced a manual Google Sheets workflow.
+                        Tracks weekly deliverables for 37+ active clients, with admin panels,
+                        HubSpot CRM sync, and a live business metrics dashboard.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">AWS</span>
+                        <span class="tech-badge">HubSpot API</span>
+                    </div>
+                    <div class="project-code">// Deliverable status tracking
+interface Deliverable {
+  clientId: string;
+  weekOf: Date;
+  status: 'pending' | 'in_progress'
+        | 'delivered';
+  followUpRequired: boolean;
+}</div>
+                    <div class="project-links">
+                        <span class="project-link" style="opacity:0.5; cursor:default;">
+                            Private — Company Project
+                        </span>
+                        <a href="contacto.html" class="project-link">Request Info</a>
+                    </div>
+                </div>
+            </div>
+
             <!-- Project 1 -->
             <div class="project-card" data-category="web">
+                <div class="featured-badge" style="background: linear-gradient(135deg, #ff9500, #ff006e);">Placeholder</div>
                 <div class="project-image-container">
                     <!-- You can use an emoji or an image -->
                     🚀
@@ -121,6 +159,7 @@ const addToCart = (product) => {
 
             <!-- Project 2 -->
             <div class="project-card" data-category="mobile">
+                <div class="featured-badge" style="background: linear-gradient(135deg, #ff9500, #ff006e);">Placeholder</div>
                 <div class="project-image-container" style="background: linear-gradient(135deg, #ff006e, #8338ec);">
                     📱
                     <!-- <img src="assets/images/proyecto2.jpg" alt="Task Manager App"> -->
@@ -152,6 +191,7 @@ const scheduleNotification = async (task) => {
 
             <!-- Project 3 -->
             <div class="project-card" data-category="data">
+                <div class="featured-badge" style="background: linear-gradient(135deg, #ff9500, #ff006e);">Placeholder</div>
                 <div class="project-image-container" style="background: linear-gradient(135deg, #06ffa5, #00d4ff);">
                     🎮
                     <!-- <img src="assets/images/proyecto3.jpg" alt="Real-Time Dashboard"> -->
@@ -182,6 +222,7 @@ ws.onmessage = (event) => {
 
             <!-- Project 4 - Additional example -->
             <div class="project-card" data-category="ai">
+                <div class="featured-badge" style="background: linear-gradient(135deg, #ff9500, #ff006e);">Placeholder</div>
                 <div class="project-image-container" style="background: linear-gradient(135deg, #ffd60a, #ff006e);">
                     🤖
                     <!-- <img src="assets/images/proyecto4.jpg" alt="AI Chatbot"> -->
@@ -211,6 +252,7 @@ def process_message(text):
 
             <!-- Project 5 - Additional example -->
             <div class="project-card" data-category="design">
+                <div class="featured-badge" style="background: linear-gradient(135deg, #ff9500, #ff006e);">Placeholder</div>
                 <div class="project-image-container" style="background: linear-gradient(135deg, #4cc9f0, #7209b7);">
                     🎨
                     <!-- <img src="assets/images/proyecto5.jpg" alt="Design System"> -->
@@ -241,6 +283,7 @@ export const Button = styled.button`
 
             <!-- Project 6 - Additional example -->
             <div class="project-card" data-category="data">
+                <div class="featured-badge" style="background: linear-gradient(135deg, #ff9500, #ff006e);">Placeholder</div>
                 <div class="project-image-container" style="background: linear-gradient(135deg, #06ffa5, #ffd60a);">
                     📊
                     <!-- <img src="assets/images/proyecto6.jpg" alt="Analytics Platform"> -->

@@ -519,13 +519,31 @@ h2 {
     margin: 0 auto;
 }
 
+/* Filter buttons for certifications */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+    padding: 0 1rem;
+}
+
 .course-card {
     background: var(--bg-card);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 2rem;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+}
+
+/* Hide animation for filtered certifications */
+.course-card.hide {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
 }
 
 .course-card:hover {

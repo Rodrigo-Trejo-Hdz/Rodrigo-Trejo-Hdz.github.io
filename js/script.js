@@ -224,3 +224,49 @@ if (document.readyState === 'loading') {
 } else {
     initProjectFilters();
 }
+
+// =====================
+// CERTIFICATION FILTERS
+// =====================
+function initCertificationFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const courseCards = document.querySelectorAll('.course-card');
+
+    // Si no hay filtros en la página, salir
+    if (filterButtons.length === 0 || courseCards.length === 0) return;
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filterValue = this.getAttribute('data-filter');
+
+            // Actualizar botones activos
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            // Filtrar certificaciones
+            courseCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+
+                if (filterValue === 'all' || cardCategory === filterValue) {
+                    card.classList.remove('hide');
+                    card.style.display = 'block';
+                } else {
+                    card.classList.add('hide');
+                    // Esperar a que termine la animación antes de ocultar
+                    setTimeout(() => {
+                        if (card.classList.contains('hide')) {
+                            card.style.display = 'none';
+                        }
+                    }, 400);
+                }
+            });
+        });
+    });
+}
+
+// Inicializar certification filters cuando el DOM esté listo
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCertificationFilters);
+} else {
+    initCertificationFilters();
+}

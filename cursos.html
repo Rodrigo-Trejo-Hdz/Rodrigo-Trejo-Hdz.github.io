@@ -71,18 +71,26 @@
             </p>
         </div>
 
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Certifications</button>
+            <button class="filter-btn" data-filter="aws">AWS</button>
+            <button class="filter-btn" data-filter="microsoft">Microsoft</button>
+            <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+
         <!-- Courses List -->
         <div class="courses-container">
 
-            <!-- Course 1: Advanced Microsoft Power BI -->
-            <div class="course-card">
+            <!-- Course 1: AWS Certified AI Practitioner — Mar 2026 -->
+            <div class="course-card" data-category="aws">
                 <div class="course-header" onclick="toggleCourse(this)">
                     <div class="course-main-info">
-                        <h3 class="course-title-text">Advanced Microsoft Power BI</h3>
-                        <p class="course-institution">Coursera • 2024</p>
+                        <h3 class="course-title-text">AWS Certified AI Practitioner</h3>
+                        <p class="course-institution">AWS • 2026</p>
                     </div>
                     <div class="course-actions">
-                        <a href="https://www.coursera.org/verify/2J6PMS4FAGVF"
+                        <a href="https://www.credly.com/badges/e4ca7bd0-e07e-4448-928e-e2657a391fe3/linked_in_profile"
                            class="course-link"
                            target="_blank"
                            onclick="event.stopPropagation()">
@@ -96,174 +104,39 @@
                         <div class="course-info-grid">
                             <div class="course-info-item">
                                 <div class="course-info-label">Date</div>
-                                <div class="course-info-value">Nov 2024</div>
-                            </div>
-                            <div class="course-info-item">
-                                <div class="course-info-label">Format</div>
-                                <div class="course-info-value">Online</div>
-                            </div>
-                            <div class="course-info-item">
-                                <div class="course-info-label">Level</div>
-                                <div class="course-info-value">Advanced</div>
-                            </div>
-                        </div>
-                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
-                        <ul class="course-skills-list">
-                            <li>Advanced data modeling in Power BI</li>
-                            <li>Advanced DAX (Data Analysis Expressions)</li>
-                            <li>Interactive visualizations and dashboards</li>
-                            <li>Power Query and data transformation</li>
-                            <li>Report performance optimization</li>
-                            <li>Azure and cloud services integration</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Course 2: Machine Learning in Power BI -->
-            <div class="course-card">
-                <div class="course-header" onclick="toggleCourse(this)">
-                    <div class="course-main-info">
-                        <h3 class="course-title-text">Complete Machine Learning Course in Microsoft Power BI</h3>
-                        <p class="course-institution">Coursera • 2024</p>
-                    </div>
-                    <div class="course-actions">
-                        <a href="https://coursera.org/share/914a9db6d159e79b4d9317e1b5fa6edb"
-                           class="course-link"
-                           target="_blank"
-                           onclick="event.stopPropagation()">
-                            View Credential
-                        </a>
-                        <div class="toggle-icon">▼</div>
-                    </div>
-                </div>
-                <div class="course-details">
-                    <div class="course-details-content">
-                        <div class="course-info-grid">
-                            <div class="course-info-item">
-                                <div class="course-info-label">Date</div>
-                                <div class="course-info-value">Aug 2024</div>
-                            </div>
-                            <div class="course-info-item">
-                                <div class="course-info-label">Format</div>
-                                <div class="course-info-value">Online</div>
-                            </div>
-                            <div class="course-info-item">
-                                <div class="course-info-label">Level</div>
-                                <div class="course-info-value">Intermediate</div>
-                            </div>
-                        </div>
-                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
-                        <ul class="course-skills-list">
-                            <li>ML model integration in Power BI</li>
-                            <li>Azure Machine Learning with Power BI</li>
-                            <li>Predictive analysis and forecasting</li>
-                            <li>ML results visualization</li>
-                            <li>AutoML and cognitive services</li>
-                            <li>Production model deployment</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Course 3: Refresh Manager Power BI -->
-            <div class="course-card">
-                <div class="course-header" onclick="toggleCourse(this)">
-                    <div class="course-main-info">
-                        <h3 class="course-title-text">Refresh Manager Power BI</h3>
-                        <p class="course-institution">Microsoft • 2025</p>
-                    </div>
-                    <div class="course-actions">
-                        <a href="https://learn.microsoft.com/api/achievements/share/en-us/RodrigoTrejo-1720/K6H532WB?sharingId=DE5E30B11550A1DE"
-                           class="course-link"
-                           target="_blank"
-                           onclick="event.stopPropagation()">
-                            View Credential
-                        </a>
-                        <div class="toggle-icon">▼</div>
-                    </div>
-                </div>
-                <div class="course-details">
-                    <div class="course-details-content">
-                        <div class="course-info-grid">
-                            <div class="course-info-item">
-                                <div class="course-info-label">Date</div>
-                                <div class="course-info-value">May 2025</div>
+                                <div class="course-info-value">Mar 2026</div>
                             </div>
                             <div class="course-info-item">
                                 <div class="course-info-label">Issuer</div>
-                                <div class="course-info-value">Microsoft Learn</div>
+                                <div class="course-info-value">Amazon Web Services</div>
                             </div>
                             <div class="course-info-item">
                                 <div class="course-info-label">Level</div>
-                                <div class="course-info-value">Intermediate</div>
+                                <div class="course-info-value">Foundational</div>
                             </div>
                         </div>
                         <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
                         <ul class="course-skills-list">
-                            <li>Refresh schedule configuration</li>
-                            <li>Gateway and connection management</li>
-                            <li>Update time optimization</li>
-                            <li>Failed refresh troubleshooting</li>
-                            <li>Power BI Service administration</li>
-                            <li>Dataset monitoring and alerts</li>
+                            <li>AI/ML fundamentals on AWS</li>
+                            <li>Amazon SageMaker and managed ML services</li>
+                            <li>Generative AI and foundation models</li>
+                            <li>Responsible AI and security best practices</li>
+                            <li>AWS AI services (Rekognition, Comprehend, Lex)</li>
+                            <li>Cloud AI solution architecture and deployment</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Course 4: Matlab AI (Multiple Courses) -->
-            <div class="course-card">
+            <!-- Course 2: AWS Technical Accreditation — Feb 2026 -->
+            <div class="course-card" data-category="aws">
                 <div class="course-header" onclick="toggleCourse(this)">
                     <div class="course-main-info">
-                        <h3 class="course-title-text">Matlab AI - Specialization Track</h3>
-                        <p class="course-institution">Matlab onramp • 2023</p>
+                        <h3 class="course-title-text">AWS Technical Accreditation</h3>
+                        <p class="course-institution">AWS Partner Network • 2026</p>
                     </div>
                     <div class="course-actions">
-                        <span class="course-link" style="cursor: pointer;">
-                            View Courses (6 completed)
-                        </span>
-                        <div class="toggle-icon">▼</div>
-                    </div>
-                </div>
-                <div class="course-details">
-                    <div class="course-details-content">
-                        <div class="course-info-grid">
-                            <div class="course-info-item">
-                                <div class="course-info-label">Date</div>
-                                <div class="course-info-value">May 2023</div>
-                            </div>
-                            <div class="course-info-item">
-                                <div class="course-info-label">Courses</div>
-                                <div class="course-info-value">6 Onramps</div>
-                            </div>
-                            <div class="course-info-item">
-                                <div class="course-info-label">Level</div>
-                                <div class="course-info-value">Intermediate-Advanced</div>
-                            </div>
-                        </div>
-                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Completed Courses</h4>
-                        <ul class="course-skills-list">
-                            <li>Matlab Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=acafcea5-33e5-4f33-aaf5-4809bc666a45&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
-                            <li>Simulink Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=24e497d7-abb0-4bd7-a156-afc836ac07e1&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
-                            <li>Machine Learning Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=4990ac83-205a-4a24-b473-dc2de588e5d9&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
-                            <li>Deep Learning Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=8b4b79bd-ae4a-4bc7-bc0b-f00485d259d9&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
-                            <li>Reinforcement Learning Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=92d22f73-aae2-4030-8477-a44672e41121&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
-                            <li>Computer Vision Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=5663da48-b7cc-4e8b-9fcf-0b84393d8d81&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Course 5: AWS Certified AI Practitioner Preparation -->
-            <div class="course-card">
-                <div class="course-header" onclick="toggleCourse(this)">
-                    <div class="course-main-info">
-                        <h3 class="course-title-text">AWS Certified AI Practitioner Preparation (AIF-C01)</h3>
-                        <p class="course-institution">Udemy • 2025</p>
-                    </div>
-                    <div class="course-actions">
-                        <a href="https://www.udemy.com/certificate/UC-50f88707-1d0d-4a55-b213-9acfc1cdf299/"
+                        <a href="https://www.credly.com/badges/310a678c-7ae1-43a5-8fdd-6148ce7d4e6f/public_url"
                            class="course-link"
                            target="_blank"
                            onclick="event.stopPropagation()">
@@ -277,11 +150,11 @@
                         <div class="course-info-grid">
                             <div class="course-info-item">
                                 <div class="course-info-label">Date</div>
-                                <div class="course-info-value">Sep 2025</div>
+                                <div class="course-info-value">Feb 2026</div>
                             </div>
                             <div class="course-info-item">
-                                <div class="course-info-label">Preparation</div>
-                                <div class="course-info-value">AWS Certification</div>
+                                <div class="course-info-label">Issuer</div>
+                                <div class="course-info-value">AWS Partner Network</div>
                             </div>
                             <div class="course-info-item">
                                 <div class="course-info-label">Level</div>
@@ -290,19 +163,19 @@
                         </div>
                         <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
                         <ul class="course-skills-list">
-                            <li>AI/ML fundamentals in AWS</li>
-                            <li>Amazon SageMaker and ML services</li>
-                            <li>AWS AI services (Rekognition, Comprehend, Lex)</li>
-                            <li>Responsible AI and best practices</li>
-                            <li>ML model deployment and monitoring</li>
-                            <li>Cloud AI solution architecture</li>
+                            <li>AWS Partner Program knowledge</li>
+                            <li>Technical sales and pre-sales</li>
+                            <li>AWS solutions architecture</li>
+                            <li>Cloud migration strategies</li>
+                            <li>Customer engagement best practices</li>
+                            <li>AWS value proposition and differentiation</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Course 6: Amazon Bedrock Getting Started -->
-            <div class="course-card">
+            <!-- Course 3: Amazon Bedrock Getting Started — Dec 2025 -->
+            <div class="course-card" data-category="aws">
                 <div class="course-header" onclick="toggleCourse(this)">
                     <div class="course-main-info">
                         <h3 class="course-title-text">Amazon Bedrock Getting Started</h3>
@@ -347,8 +220,238 @@
                 </div>
             </div>
 
-            <!-- Course 7: Bloomberg Finance Fundamentals -->
-            <div class="course-card">
+            <!-- Course 4: Refresh Manager Power BI — May 2025 -->
+            <div class="course-card" data-category="microsoft">
+                <div class="course-header" onclick="toggleCourse(this)">
+                    <div class="course-main-info">
+                        <h3 class="course-title-text">Refresh Manager Power BI</h3>
+                        <p class="course-institution">Microsoft • 2025</p>
+                    </div>
+                    <div class="course-actions">
+                        <a href="https://learn.microsoft.com/api/achievements/share/en-us/RodrigoTrejo-1720/K6H532WB?sharingId=DE5E30B11550A1DE"
+                           class="course-link"
+                           target="_blank"
+                           onclick="event.stopPropagation()">
+                            View Credential
+                        </a>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                </div>
+                <div class="course-details">
+                    <div class="course-details-content">
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <div class="course-info-label">Date</div>
+                                <div class="course-info-value">May 2025</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Issuer</div>
+                                <div class="course-info-value">Microsoft Learn</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Level</div>
+                                <div class="course-info-value">Intermediate</div>
+                            </div>
+                        </div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
+                        <ul class="course-skills-list">
+                            <li>Refresh schedule configuration</li>
+                            <li>Gateway and connection management</li>
+                            <li>Update time optimization</li>
+                            <li>Failed refresh troubleshooting</li>
+                            <li>Power BI Service administration</li>
+                            <li>Dataset monitoring and alerts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 5: AWS Technical Essentials — Jan 2025 -->
+            <div class="course-card" data-category="aws">
+                <div class="course-header" onclick="toggleCourse(this)">
+                    <div class="course-main-info">
+                        <h3 class="course-title-text">AWS Technical Essentials</h3>
+                        <p class="course-institution">AWS Training • 2025</p>
+                    </div>
+                    <div class="course-actions">
+                        <a href="assets/certificates/AWS Technical Essentials.pdf"
+                           class="course-link"
+                           target="_blank"
+                           onclick="event.stopPropagation()">
+                            View Certificate (PDF)
+                        </a>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                </div>
+                <div class="course-details">
+                    <div class="course-details-content">
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <div class="course-info-label">Date</div>
+                                <div class="course-info-value">Jan 2025</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Issuer</div>
+                                <div class="course-info-value">AWS Training</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Level</div>
+                                <div class="course-info-value">Foundational</div>
+                            </div>
+                        </div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
+                        <ul class="course-skills-list">
+                            <li>AWS core services (EC2, S3, RDS)</li>
+                            <li>Cloud computing fundamentals</li>
+                            <li>AWS infrastructure and architecture</li>
+                            <li>Security and access management (IAM)</li>
+                            <li>Networking basics (VPC, subnets)</li>
+                            <li>Cost optimization strategies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 6: Advanced Microsoft Power BI — Nov 2024 -->
+            <div class="course-card" data-category="microsoft">
+                <div class="course-header" onclick="toggleCourse(this)">
+                    <div class="course-main-info">
+                        <h3 class="course-title-text">Advanced Microsoft Power BI</h3>
+                        <p class="course-institution">Coursera • 2024</p>
+                    </div>
+                    <div class="course-actions">
+                        <a href="https://www.coursera.org/verify/2J6PMS4FAGVF"
+                           class="course-link"
+                           target="_blank"
+                           onclick="event.stopPropagation()">
+                            View Credential
+                        </a>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                </div>
+                <div class="course-details">
+                    <div class="course-details-content">
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <div class="course-info-label">Date</div>
+                                <div class="course-info-value">Nov 2024</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Format</div>
+                                <div class="course-info-value">Online</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Level</div>
+                                <div class="course-info-value">Advanced</div>
+                            </div>
+                        </div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
+                        <ul class="course-skills-list">
+                            <li>Advanced data modeling in Power BI</li>
+                            <li>Advanced DAX (Data Analysis Expressions)</li>
+                            <li>Interactive visualizations and dashboards</li>
+                            <li>Power Query and data transformation</li>
+                            <li>Report performance optimization</li>
+                            <li>Azure and cloud services integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 7: Complete Machine Learning in Power BI — Aug 2024 -->
+            <div class="course-card" data-category="microsoft">
+                <div class="course-header" onclick="toggleCourse(this)">
+                    <div class="course-main-info">
+                        <h3 class="course-title-text">Complete Machine Learning Course in Microsoft Power BI</h3>
+                        <p class="course-institution">Coursera • 2024</p>
+                    </div>
+                    <div class="course-actions">
+                        <a href="https://coursera.org/share/914a9db6d159e79b4d9317e1b5fa6edb"
+                           class="course-link"
+                           target="_blank"
+                           onclick="event.stopPropagation()">
+                            View Credential
+                        </a>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                </div>
+                <div class="course-details">
+                    <div class="course-details-content">
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <div class="course-info-label">Date</div>
+                                <div class="course-info-value">Aug 2024</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Format</div>
+                                <div class="course-info-value">Online</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Level</div>
+                                <div class="course-info-value">Intermediate</div>
+                            </div>
+                        </div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
+                        <ul class="course-skills-list">
+                            <li>ML model integration in Power BI</li>
+                            <li>Azure Machine Learning with Power BI</li>
+                            <li>Predictive analysis and forecasting</li>
+                            <li>ML results visualization</li>
+                            <li>AutoML and cognitive services</li>
+                            <li>Production model deployment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 8: Storyselling Course — Jul 2024 -->
+            <div class="course-card" data-category="other">
+                <div class="course-header" onclick="toggleCourse(this)">
+                    <div class="course-main-info">
+                        <h3 class="course-title-text">Storyselling Course</h3>
+                        <p class="course-institution">ITAM • 2024</p>
+                    </div>
+                    <div class="course-actions">
+                        <a href="https://www.credly.com/badges/a61822d8-781b-4b33-92b3-d96055907a20/public_url"
+                           class="course-link"
+                           target="_blank"
+                           onclick="event.stopPropagation()">
+                            View Credential
+                        </a>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                </div>
+                <div class="course-details">
+                    <div class="course-details-content">
+                        <div class="course-info-grid">
+                            <div class="course-info-item">
+                                <div class="course-info-label">Date</div>
+                                <div class="course-info-value">Jul 2024</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Institution</div>
+                                <div class="course-info-value">ITAM</div>
+                            </div>
+                            <div class="course-info-item">
+                                <div class="course-info-label">Level</div>
+                                <div class="course-info-value">Professional</div>
+                            </div>
+                        </div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
+                        <ul class="course-skills-list">
+                            <li>Storytelling applied to sales and data</li>
+                            <li>Effective narrative for presentations</li>
+                            <li>Data insights communication</li>
+                            <li>Audience persuasion and engagement</li>
+                            <li>Narrative information visualization</li>
+                            <li>Executive presentation techniques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 9: Bloomberg Finance Fundamentals — Jun 2024 -->
+            <div class="course-card" data-category="other">
                 <div class="course-header" onclick="toggleCourse(this)">
                     <div class="course-main-info">
                         <h3 class="course-title-text">Bloomberg Finance Fundamentals</h3>
@@ -393,20 +496,17 @@
                 </div>
             </div>
 
-            <!-- Course 8: Storyselling Course -->
-            <div class="course-card">
+            <!-- Course 10: Matlab AI Specialization — May 2023 -->
+            <div class="course-card" data-category="other">
                 <div class="course-header" onclick="toggleCourse(this)">
                     <div class="course-main-info">
-                        <h3 class="course-title-text">Storyselling Course</h3>
-                        <p class="course-institution">ITAM • 2024</p>
+                        <h3 class="course-title-text">Matlab AI - Specialization Track</h3>
+                        <p class="course-institution">Matlab onramp • 2023</p>
                     </div>
                     <div class="course-actions">
-                        <a href="https://www.credly.com/badges/a61822d8-781b-4b33-92b3-d96055907a20/public_url"
-                           class="course-link"
-                           target="_blank"
-                           onclick="event.stopPropagation()">
-                            View Credential
-                        </a>
+                        <span class="course-link" style="cursor: pointer;">
+                            View Courses (6 completed)
+                        </span>
                         <div class="toggle-icon">▼</div>
                     </div>
                 </div>
@@ -415,25 +515,25 @@
                         <div class="course-info-grid">
                             <div class="course-info-item">
                                 <div class="course-info-label">Date</div>
-                                <div class="course-info-value">Jul 2024</div>
+                                <div class="course-info-value">May 2023</div>
                             </div>
                             <div class="course-info-item">
-                                <div class="course-info-label">Institution</div>
-                                <div class="course-info-value">ITAM</div>
+                                <div class="course-info-label">Courses</div>
+                                <div class="course-info-value">6 Onramps</div>
                             </div>
                             <div class="course-info-item">
                                 <div class="course-info-label">Level</div>
-                                <div class="course-info-value">Professional</div>
+                                <div class="course-info-value">Intermediate-Advanced</div>
                             </div>
                         </div>
-                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Skills Acquired</h4>
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Completed Courses</h4>
                         <ul class="course-skills-list">
-                            <li>Storytelling applied to sales and data</li>
-                            <li>Effective narrative for presentations</li>
-                            <li>Data insights communication</li>
-                            <li>Audience persuasion and engagement</li>
-                            <li>Narrative information visualization</li>
-                            <li>Executive presentation techniques</li>
+                            <li>Matlab Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=acafcea5-33e5-4f33-aaf5-4809bc666a45&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
+                            <li>Simulink Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=24e497d7-abb0-4bd7-a156-afc836ac07e1&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
+                            <li>Machine Learning Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=4990ac83-205a-4a24-b473-dc2de588e5d9&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
+                            <li>Deep Learning Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=8b4b79bd-ae4a-4bc7-bc0b-f00485d259d9&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
+                            <li>Reinforcement Learning Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=92d22f73-aae2-4030-8477-a44672e41121&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
+                            <li>Computer Vision Onramp - <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=5663da48-b7cc-4e8b-9fcf-0b84393d8d81&" target="_blank" style="color: var(--primary-color);">View credential</a></li>
                         </ul>
                     </div>
                 </div>
