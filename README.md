@@ -264,7 +264,7 @@ Feel free to use this template for your own portfolio, but please:
 Data Scientist
 
 - **Email**: idm.rodrigo.trejo@gmail.com
-- **LinkedIn**: [Rodrigo Iván Trejo Hernández](https://www.linkedin.com/in/rodrigo-iv%C3%A1n-trejo-hern%C3%A1ndez-300bba249/)
+- **LinkedIn**: [Rodrigo Iván Trejo Hernández](www.linkedin.com/in/rodrigo-trejo-hdz/)
 - **GitHub**: [@Rodrigo-Trejo-Hdz](https://github.com/Rodrigo-Trejo-Hdz)
 - **Portfolio**: [rodrigo-trejo-hdz.github.io](https://rodrigo-trejo-hdz.github.io/)
 
