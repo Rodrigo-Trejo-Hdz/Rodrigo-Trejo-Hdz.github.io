@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image — Rodrigo Trejo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            width: 1200px;
+            height: 630px;
+            overflow: hidden;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: #0a0e27;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Radial gradient background */
+        body::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 10% 20%, rgba(157, 78, 221, 0.3), transparent 55%),
+                radial-gradient(ellipse at 90% 80%, rgba(0, 245, 255, 0.2), transparent 55%);
+        }
+
+        .card {
+            position: relative;
+            width: 1100px;
+            height: 540px;
+            background: rgba(21, 27, 61, 0.85);
+            border: 1px solid rgba(0, 245, 255, 0.25);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            padding: 60px 72px;
+            gap: 60px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 80px rgba(0, 245, 255, 0.1);
+        }
+
+        /* Left column */
+        .left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .eyebrow {
+            font-size: 14px;
+            font-weight: 600;
+            color: #00f5ff;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .eyebrow::before {
+            content: '';
+            width: 36px;
+            height: 2px;
+            background: #00f5ff;
+            flex-shrink: 0;
+        }
+
+        .name {
+            font-size: 58px;
+            font-weight: 900;
+            line-height: 1.05;
+            margin-bottom: 14px;
+            background: linear-gradient(135deg, #ffffff 40%, #a8b2d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #00f5ff, #9d4edd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 32px;
+        }
+
+        .tagline {
+            font-size: 15px;
+            color: #a8b2d1;
+            line-height: 1.7;
+            max-width: 460px;
+        }
+
+        /* Right column */
+        .right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+            flex-shrink: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .skill-pill {
+            padding: 8px 18px;
+            background: rgba(0, 245, 255, 0.08);
+            border: 1px solid rgba(0, 245, 255, 0.25);
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #e0e8ff;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .divider {
+            width: 1px;
+            height: 360px;
+            background: linear-gradient(to bottom, transparent, rgba(0, 245, 255, 0.3), transparent);
+            flex-shrink: 0;
+        }
+
+        /* Footer bar */
+        .footer {
+            position: absolute;
+            bottom: 28px;
+            left: 72px;
+            right: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00f5ff, #9d4edd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .url {
+            font-size: 13px;
+            color: #a8b2d1;
+            letter-spacing: 0.5px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <!-- Left column -->
+        <div class="left">
+            <div class="eyebrow">Portfolio</div>
+            <div class="name">Rodrigo<br>Trejo</div>
+            <div class="title">Analytics Engineer · Data Scientist</div>
+            <div class="tagline">
+                Building data infrastructure and ML systems at Data Bunker.<br>
+                2+ years delivering pricing intelligence for FEMSA, Danone & Coppel.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Right column -->
+        <div class="right">
+            <div class="skills-grid">
+                <div class="skill-pill">Python</div>
+                <div class="skill-pill">AWS</div>
+                <div class="skill-pill">SQL</div>
+                <div class="skill-pill">Power BI</div>
+                <div class="skill-pill">React</div>
+                <div class="skill-pill">PySpark</div>
+                <div class="skill-pill">Scikit-learn</div>
+                <div class="skill-pill">ETL / ELT</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="logo">&lt;RT/&gt;</div>
+            <div class="url">rodrigo-trejo-hdz.github.io</div>
+        </div>
+    </div>
+</body>
+</html>

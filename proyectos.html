@@ -21,8 +21,8 @@
     <meta property="twitter:image" content="https://rodrigo-trejo-hdz.github.io/assets/images/og-image.jpg">
 
     <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
 
     <!-- Google Analytics -->
@@ -45,7 +45,7 @@
 <body>
     <!-- NAVIGATION -->
     <nav>
-        <a href="index.html" class="logo">&lt;/Dev&gt;</a>
+        <a href="index.html" class="logo">&lt;RT/&gt;</a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="proyectos.html">Projects</a></li>
@@ -75,16 +75,91 @@
         <div class="project-filters">
             <button class="filter-btn active" data-filter="all">All Projects</button>
             <button class="filter-btn" data-filter="web">Web Development</button>
-            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
             <button class="filter-btn" data-filter="data">Data Science</button>
             <button class="filter-btn" data-filter="ai">AI/ML</button>
-            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="analytics">Analytics</button>
         </div>
 
         <!-- Projects Grid -->
         <div class="projects-grid">
 
-            <!-- Project: Delivery Management Platform -->
+            <!-- Project 1: Product Similarity Search Tool -->
+            <div class="project-card" data-category="ai">
+                <div class="project-image-container" style="background: linear-gradient(135deg, #00f5ff, #9d4edd);">
+                    <img src="assets/images/product-search-preview.png" alt="Product Similarity Search Tool" style="width:100%; height:100%; object-fit:cover; opacity:0.85;" onerror="this.style.display='none'">
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Product Similarity Search Tool</h3>
+                    <p class="project-description">
+                        Internal web app that identifies equivalent products across retailers and brands.
+                        Users upload a product list or image and the system returns the closest matches
+                        found on the web — combining fuzzy text matching on descriptions and visual
+                        similarity search (similar to Google Lens) across Mexico, US, Colombia, and Argentina.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Fuzzy Matching</span>
+                        <span class="tech-badge">Image Similarity</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">AWS Amplify</span>
+                        <span class="tech-badge">AWS ECS</span>
+                    </div>
+                    <div class="project-code">def find_similar_products(query, method):
+    if method == "text":
+        return fuzzy_match(query, product_db)
+    elif method == "image":
+        embedding = encode_image(query)
+        return cosine_similarity_search(
+            embedding, visual_index
+        )</div>
+                    <div class="project-links">
+                        <span class="project-link" style="opacity:0.5; cursor:default;">
+                            Private — Company Project
+                        </span>
+                        <a href="contacto.html" class="project-link">Request Info</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Price Elasticity Dashboard -->
+            <div class="project-card" data-category="analytics">
+                <div class="project-image-container" style="background: linear-gradient(135deg, #0d6e6e, #1a3a5c);">
+                    <img src="assets/images/elasticity-preview.png" alt="Price Elasticity Dashboard" style="width:100%; height:100%; object-fit:cover; opacity:0.85;" onerror="this.style.display='none'">
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Price Elasticity & Sensitivity Dashboard</h3>
+                    <p class="project-description">
+                        Power BI dashboard that allows clients to dynamically analyze price elasticity
+                        at the category and SKU level. Displays monthly sell-out trends, price variance,
+                        and a sensitivity simulator showing how unit volume and revenue respond to
+                        price changes — enabling data-driven pricing decisions.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Power BI</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">DAX</span>
+                        <span class="tech-badge">Statistical Modeling</span>
+                        <span class="tech-badge">AWS S3</span>
+                    </div>
+                    <div class="project-code">import numpy as np
+
+def price_elasticity(q1, q0, p1, p0):
+    pct_q = (q1 - q0) / q0
+    pct_p = (p1 - p0) / p0
+    epd = pct_q / pct_p
+    label = "Elastic" if abs(epd) > 1 \
+            else "Inelastic"
+    return round(epd, 2), label</div>
+                    <div class="project-links">
+                        <span class="project-link" style="opacity:0.5; cursor:default;">
+                            Private — Company Project
+                        </span>
+                        <a href="contacto.html" class="project-link">Request Info</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Delivery Management Platform -->
             <div class="project-card" data-category="web">
                 <div class="project-image-container" style="background: linear-gradient(135deg, #00f5ff, #9d4edd);">
                     📅
@@ -93,15 +168,16 @@
                     <h3 class="project-title">Delivery Management Platform</h3>
                     <p class="project-description">
                         Full-stack internal web app that replaced a manual Google Sheets workflow.
-                        Tracks weekly deliverables for 37+ active clients, with admin panels,
-                        HubSpot CRM sync, and a live business metrics dashboard.
+                        Tracks weekly deliverables for 37+ active clients with admin panels,
+                        HubSpot CRM sync, a prospect pipeline (kanban), contract and billing records,
+                        and a live business metrics dashboard.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">React</span>
-                        <span class="tech-badge">TypeScript</span>
                         <span class="tech-badge">Node.js</span>
                         <span class="tech-badge">PostgreSQL</span>
-                        <span class="tech-badge">AWS</span>
+                        <span class="tech-badge">AWS Amplify</span>
+                        <span class="tech-badge">AWS ECS</span>
                         <span class="tech-badge">HubSpot API</span>
                     </div>
                     <div class="project-code">// Deliverable status tracking
@@ -121,194 +197,114 @@ interface Deliverable {
                 </div>
             </div>
 
-            <!-- Project 1 -->
-            <div class="project-card" data-category="web">
-                <div class="featured-badge" style="background: linear-gradient(135deg, #ff9500, #ff006e);">Placeholder</div>
-                <div class="project-image-container">
-                    <!-- You can use an emoji or an image -->
-                    🚀
-                    <!-- Or use an image: -->
-                    <!-- <img src="assets/images/proyecto1.jpg" alt="E-Commerce Platform"> -->
-                </div>
-                <div class="project-info">
-                    <h3 class="project-title">E-Commerce Platform</h3>
-                    <p class="project-description">
-                        Complete e-commerce platform with shopping cart, integrated payment system,
-                        admin panel, and real-time analytics.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">React</span>
-                        <span class="tech-badge">Node.js</span>
-                        <span class="tech-badge">MongoDB</span>
-                        <span class="tech-badge">Stripe</span>
-                    </div>
-                    <div class="project-code">// Cart implementation
-const addToCart = (product) => {
-  dispatch({
-    type: 'ADD_TO_CART',
-    payload: product
-  });
-  updateLocalStorage();
-}</div>
-                    <div class="project-links">
-                        <a href="https://github.com/tuusuario/proyecto1" target="_blank" class="project-link">GitHub</a>
-                        <a href="https://proyecto1.com" target="_blank" class="project-link">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card" data-category="mobile">
-                <div class="featured-badge" style="background: linear-gradient(135deg, #ff9500, #ff006e);">Placeholder</div>
-                <div class="project-image-container" style="background: linear-gradient(135deg, #ff006e, #8338ec);">
-                    📱
-                    <!-- <img src="assets/images/proyecto2.jpg" alt="Task Manager App"> -->
-                </div>
-                <div class="project-info">
-                    <h3 class="project-title">Task Manager App</h3>
-                    <p class="project-description">
-                        Cross-platform mobile app for task management with cloud sync,
-                        smart notifications, and team collaboration.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">React Native</span>
-                        <span class="tech-badge">Firebase</span>
-                        <span class="tech-badge">Redux</span>
-                    </div>
-                    <div class="project-code">// Notification system
-const scheduleNotification = async (task) => {
-  await Notifications.scheduleAsync({
-    content: { title: task.title },
-    trigger: { date: task.deadline }
-  });
-}</div>
-                    <div class="project-links">
-                        <a href="https://github.com/tuusuario/proyecto2" target="_blank" class="project-link">GitHub</a>
-                        <a href="https://proyecto2.com" target="_blank" class="project-link">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
+            <!-- Project 4: Bonafont KPI Tracker -->
             <div class="project-card" data-category="data">
-                <div class="featured-badge" style="background: linear-gradient(135deg, #ff9500, #ff006e);">Placeholder</div>
                 <div class="project-image-container" style="background: linear-gradient(135deg, #06ffa5, #00d4ff);">
-                    🎮
-                    <!-- <img src="assets/images/proyecto3.jpg" alt="Real-Time Dashboard"> -->
+                    🏭
                 </div>
                 <div class="project-info">
-                    <h3 class="project-title">Real-Time Dashboard</h3>
+                    <h3 class="project-title">Production KPI Tracker — Bonafont</h3>
                     <p class="project-description">
-                        Analytics dashboard with real-time data visualization, customizable metrics,
-                        and automated alert system.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Vue.js</span>
-                        <span class="tech-badge">D3.js</span>
-                        <span class="tech-badge">WebSocket</span>
-                    </div>
-                    <div class="project-code">// WebSocket connection
-const ws = new WebSocket(WS_URL);
-ws.onmessage = (event) => {
-  const data = JSON.parse(event.data);
-  updateCharts(data);
-}</div>
-                    <div class="project-links">
-                        <a href="https://github.com/tuusuario/proyecto3" target="_blank" class="project-link">GitHub</a>
-                        <a href="https://proyecto3.com" target="_blank" class="project-link">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4 - Additional example -->
-            <div class="project-card" data-category="ai">
-                <div class="featured-badge" style="background: linear-gradient(135deg, #ff9500, #ff006e);">Placeholder</div>
-                <div class="project-image-container" style="background: linear-gradient(135deg, #ffd60a, #ff006e);">
-                    🤖
-                    <!-- <img src="assets/images/proyecto4.jpg" alt="AI Chatbot"> -->
-                </div>
-                <div class="project-info">
-                    <h3 class="project-title">AI Chatbot</h3>
-                    <p class="project-description">
-                        Intelligent chatbot with natural language processing, multiple API integrations,
-                        and continuous learning capabilities.
+                        Streamlit-based app built for Bonafont (Danone) to track and visualize
+                        production KPIs — units produced, defects, and rejection rates — that
+                        had no prior measurement system. Enabled structured operational reporting
+                        for plant management decisions.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">Python</span>
-                        <span class="tech-badge">TensorFlow</span>
-                        <span class="tech-badge">FastAPI</span>
-                    </div>
-                    <div class="project-code">// NLP Processing
-def process_message(text):
-    tokens = tokenizer.encode(text)
-    response = model.predict(tokens)
-    return decode_response(response)</div>
-                    <div class="project-links">
-                        <a href="https://github.com/tuusuario/proyecto4" target="_blank" class="project-link">GitHub</a>
-                        <a href="https://proyecto4.com" target="_blank" class="project-link">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 5 - Additional example -->
-            <div class="project-card" data-category="design">
-                <div class="featured-badge" style="background: linear-gradient(135deg, #ff9500, #ff006e);">Placeholder</div>
-                <div class="project-image-container" style="background: linear-gradient(135deg, #4cc9f0, #7209b7);">
-                    🎨
-                    <!-- <img src="assets/images/proyecto5.jpg" alt="Design System"> -->
-                </div>
-                <div class="project-info">
-                    <h3 class="project-title">Design System</h3>
-                    <p class="project-description">
-                        Complete design system with reusable components, interactive documentation,
-                        and configurable design tokens.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">React</span>
-                        <span class="tech-badge">Storybook</span>
-                        <span class="tech-badge">Styled Components</span>
-                    </div>
-                    <div class="project-code">// Component Library
-export const Button = styled.button`
-  background: ${props => props.theme.colors.primary};
-  padding: ${props => props.theme.spacing.md};
-  border-radius: ${props => props.theme.radii.lg};
-`;</div>
-                    <div class="project-links">
-                        <a href="https://github.com/tuusuario/proyecto5" target="_blank" class="project-link">GitHub</a>
-                        <a href="https://proyecto5.com" target="_blank" class="project-link">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 6 - Additional example -->
-            <div class="project-card" data-category="data">
-                <div class="featured-badge" style="background: linear-gradient(135deg, #ff9500, #ff006e);">Placeholder</div>
-                <div class="project-image-container" style="background: linear-gradient(135deg, #06ffa5, #ffd60a);">
-                    📊
-                    <!-- <img src="assets/images/proyecto6.jpg" alt="Analytics Platform"> -->
-                </div>
-                <div class="project-info">
-                    <h3 class="project-title">Analytics Platform</h3>
-                    <p class="project-description">
-                        Data analytics platform with interactive visualizations, automated reports,
-                        and machine learning for predictions.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Streamlit</span>
                         <span class="tech-badge">Pandas</span>
                         <span class="tech-badge">Plotly</span>
-                        <span class="tech-badge">PostgreSQL</span>
                     </div>
-                    <div class="project-code">// Data Analysis
+                    <div class="project-code">import streamlit as st
 import pandas as pd
-df = pd.read_sql(query, conn)
-insights = df.groupby('category')
-  .agg({'revenue': 'sum'})
-  .sort_values(descending=True)</div>
+
+df = load_production_data()
+kpi = df.groupby('line').agg({
+    'units': 'sum',
+    'defects': 'mean',
+    'rejection_rate': 'mean'
+})
+st.dataframe(kpi)</div>
                     <div class="project-links">
-                        <a href="https://github.com/tuusuario/proyecto6" target="_blank" class="project-link">GitHub</a>
-                        <a href="https://proyecto6.com" target="_blank" class="project-link">Live Demo</a>
+                        <a href="https://github.com/Rodrigo-Trejo-Hdz" target="_blank" class="project-link">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: FEMSA SKU Analysis -->
+            <div class="project-card" data-category="data">
+                <div class="project-image-container" style="background: linear-gradient(135deg, #ff9500, #c8102e);">
+                    🧪
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">SKU Profitability Analysis — FEMSA</h3>
+                    <p class="project-description">
+                        SKU-level energy consumption analysis across production stages for FEMSA,
+                        one of the largest beverage companies in Latin America. Used Python to
+                        identify high-energy-cost SKUs and support production profitability
+                        evaluation — helping the company assess which products to prioritize.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">NumPy</span>
+                        <span class="tech-badge">Pandas</span>
+                        <span class="tech-badge">Seaborn</span>
+                        <span class="tech-badge">Matplotlib</span>
+                    </div>
+                    <div class="project-code">import pandas as pd
+import seaborn as sns
+
+energy = df.groupby('sku')['energy_kwh'].sum()
+top_cost = energy.nlargest(10)
+
+sns.barplot(x=top_cost.values,
+            y=top_cost.index)
+plt.title('Top 10 Energy-Cost SKUs')</div>
+                    <div class="project-links">
+                        <a href="https://github.com/Rodrigo-Trejo-Hdz" target="_blank" class="project-link">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Coppel Route Optimization -->
+            <div class="project-card" data-category="data">
+                <div class="project-image-container" style="background: linear-gradient(135deg, #ffd60a, #e67e00);">
+                    🚚
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Last-Mile Route Optimization — Coppel</h3>
+                    <p class="project-description">
+                        Applied combinatorial optimization to improve last-mile delivery routing
+                        for Coppel, one of Mexico's largest retail chains. The solution accounted
+                        for vehicle capacity, product priority (higher-value items first), and
+                        driver shift constraints — reducing operational hours and improving
+                        route efficiency.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Optimization</span>
+                        <span class="tech-badge">Pandas</span>
+                        <span class="tech-badge">Excel</span>
+                    </div>
+                    <div class="project-code">from itertools import permutations
+
+def optimize_route(stops, vehicle_cap):
+    best, best_cost = None, float('inf')
+    for route in permutations(stops):
+        cost = total_distance(route)
+        if cost < best_cost and \
+           fits_capacity(route, vehicle_cap):
+            best, best_cost = route, cost
+    return best</div>
+                    <div class="project-links">
+                        <a href="https://github.com/Rodrigo-Trejo-Hdz" target="_blank" class="project-link">
+                            View on GitHub
+                        </a>
                     </div>
                 </div>
             </div>
