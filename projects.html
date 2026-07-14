@@ -357,36 +357,35 @@ plt.title('Top 10 Energy-Cost SKUs')</div>
 
             <!-- Project 6: Coppel Route Optimization -->
             <div class="project-card" data-category="data">
-                <div class="project-image-container" style="background: linear-gradient(135deg, var(--data), var(--ink));">
-                    🚚
+                <div class="project-image-container">
+                    <img src="assets/images/route-optimization-preview.webp" alt="Twelve optimized delivery routes radiating from the distribution center" loading="lazy">
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Last-Mile Route Optimization — Coppel</h3>
                     <p class="project-description">
-                        Applied combinatorial optimization to improve last-mile delivery routing
-                        for Coppel, one of Mexico's largest retail chains. The solution accounted
-                        for vehicle capacity, product priority (higher-value items first), and
-                        driver shift constraints — reducing operational hours and improving
-                        route efficiency.
+                        Capacitated vehicle routing (CVRP) for Coppel's e-commerce deliveries:
+                        250 drop-off points assigned to a 12-truck fleet with sweep clustering
+                        by polar angle around the distribution center, then a per-vehicle TSP
+                        solved with Google OR-Tools under shift-length, cargo-volume, and
+                        priority constraints — cutting total route distance by ~52%.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Optimization</span>
+                        <span class="tech-badge">Google OR-Tools</span>
+                        <span class="tech-badge">CVRP / TSP</span>
                         <span class="tech-badge">Pandas</span>
-                        <span class="tech-badge">Excel</span>
+                        <span class="tech-badge">Matplotlib</span>
                     </div>
-                    <div class="project-code">from itertools import permutations
-
-def optimize_route(stops, vehicle_cap):
-    best, best_cost = None, float('inf')
-    for route in permutations(stops):
-        cost = total_distance(route)
-        if cost < best_cost and \
-           fits_capacity(route, vehicle_cap):
-            best, best_cost = route, cost
-    return best</div>
+                    <div class="project-code"># Sweep: cluster stops by polar angle,
+# then solve a TSP per truck (OR-Tools)
+df["angle"] = np.arctan2(df.y_km, df.x_km)
+for stop in df.sort_values("angle").index:
+    if load + vol[stop] > CAPACITY \
+       or stops == MAX_STOPS:
+        open_next_truck()
+    assign(stop)</div>
                     <div class="project-links">
-                        <a href="https://github.com/Rodrigo-Trejo-Hdz" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <a href="https://github.com/Rodrigo-Trejo-Hdz/last-mile-route-optimization" target="_blank" rel="noopener noreferrer" class="project-link">
                             View on GitHub
                         </a>
                     </div>
