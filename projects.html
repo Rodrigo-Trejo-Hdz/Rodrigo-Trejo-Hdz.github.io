@@ -320,35 +320,34 @@ interface Deliverable {
 
             <!-- Project 5: FEMSA SKU Analysis -->
             <div class="project-card" data-category="data">
-                <div class="project-image-container" style="background: linear-gradient(135deg, var(--ink), var(--accent));">
-                    🧪
+                <div class="project-image-container">
+                    <img src="assets/images/sku-energy-preview.webp" alt="Ranking of SKUs by net margin per box after energy cost" loading="lazy">
                 </div>
                 <div class="project-info">
-                    <h3 class="project-title">SKU Profitability Analysis — FEMSA</h3>
+                    <h3 class="project-title">SKU Energy &amp; Profitability — Coca-Cola FEMSA</h3>
                     <p class="project-description">
-                        SKU-level energy consumption analysis across production stages for FEMSA,
-                        one of the largest beverage companies in Latin America. Used Python to
-                        identify high-energy-cost SKUs and support production profitability
-                        evaluation — helping the company assess which products to prioritize.
+                        Statistical inference on plant sensor data for Coca-Cola FEMSA (KOF):
+                        confidence intervals, Welch's t-tests, and ANOVA + Tukey HSD to prove
+                        which compressors and SKUs really differ in energy consumption — then
+                        netting energy cost out of unit margins to rank which product makes
+                        the most money per box.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">Python</span>
-                        <span class="tech-badge">NumPy</span>
+                        <span class="tech-badge">SciPy</span>
+                        <span class="tech-badge">statsmodels</span>
+                        <span class="tech-badge">Hypothesis Testing</span>
                         <span class="tech-badge">Pandas</span>
-                        <span class="tech-badge">Seaborn</span>
-                        <span class="tech-badge">Matplotlib</span>
                     </div>
-                    <div class="project-code">import pandas as pd
-import seaborn as sns
-
-energy = df.groupby('sku')['energy_kwh'].sum()
-top_cost = energy.nlargest(10)
-
-sns.barplot(x=top_cost.values,
-            y=top_cost.index)
-plt.title('Top 10 Energy-Cost SKUs')</div>
+                    <div class="project-code"># Is the energy difference real?
+cm = CompareMeans(DescrStatsW(comp_a),
+                  DescrStatsW(comp_b))
+t, p, dof = cm.ttest_ind(
+    alternative="two-sided",
+    usevar="unequal")   # Welch
+# then ANOVA + Tukey HSD across SKUs</div>
                     <div class="project-links">
-                        <a href="https://github.com/Rodrigo-Trejo-Hdz" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <a href="https://github.com/Rodrigo-Trejo-Hdz/sku-energy-analysis" target="_blank" rel="noopener noreferrer" class="project-link">
                             View on GitHub
                         </a>
                     </div>
