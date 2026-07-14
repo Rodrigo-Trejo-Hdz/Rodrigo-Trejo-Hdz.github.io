@@ -285,31 +285,33 @@ interface Deliverable {
                     🏭
                 </div>
                 <div class="project-info">
-                    <h3 class="project-title">Production KPI Tracker — Bonafont</h3>
+                    <h3 class="project-title">OEE Production Tracker — Bonafont</h3>
                     <p class="project-description">
-                        Streamlit-based app built for Bonafont (Danone) to track and visualize
-                        production KPIs — units produced, defects, and rejection rates — that
-                        had no prior measurement system. Enabled structured operational reporting
-                        for plant management decisions.
+                        Streamlit app built for a Bonafont (Danone) production facility that had
+                        no structured KPI measurement system. Computes and visualizes Overall
+                        Equipment Effectiveness (Availability × Performance × Quality) per shift,
+                        with trend analysis against the 85% world-class benchmark — enabling
+                        structured reporting for plant management decisions.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">Python</span>
                         <span class="tech-badge">Streamlit</span>
                         <span class="tech-badge">Pandas</span>
-                        <span class="tech-badge">Plotly</span>
+                        <span class="tech-badge">NumPy</span>
                     </div>
-                    <div class="project-code">import streamlit as st
-import pandas as pd
-
-df = load_production_data()
-kpi = df.groupby('line').agg({
-    'units': 'sum',
-    'defects': 'mean',
-    'rejection_rate': 'mean'
-})
-st.dataframe(kpi)</div>
+                    <div class="project-code">def oee_score(shift):
+    a = availability(shift.hours,
+                     shift.downtime)
+    p = performance(shift.output,
+                    shift.rated_capacity)
+    q = quality(shift.output,
+                shift.defects)
+    return a * p * q  # benchmark: 0.85</div>
                     <div class="project-links">
-                        <a href="https://github.com/Rodrigo-Trejo-Hdz" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <a href="https://appbonafont-oee-tracker.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/Rodrigo-Trejo-Hdz/app_bonafont" target="_blank" rel="noopener noreferrer" class="project-link">
                             View on GitHub
                         </a>
                     </div>
