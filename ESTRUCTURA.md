@@ -4,10 +4,10 @@
 portfolio/                          ← Carpeta raíz del proyecto
 │
 ├── 📄 index.html                   ← Página principal (inicio)
-├── 📄 proyectos.html               ← Página de proyectos (con filtros)
-├── 📄 servicios.html               ← Página de servicios freelance
-├── 📄 cursos.html                  ← Página de certificaciones
-├── 📄 contacto.html                ← Página de contacto
+├── 📄 projects.html               ← Página de proyectos (con filtros)
+├── 📄 services.html               ← Página de servicios freelance
+├── 📄 certifications.html                  ← Página de certificaciones
+├── 📄 contact.html                ← Página de contacto
 │
 ├── 📄 sitemap.xml                  ← Sitemap para SEO
 ├── 📄 README.md                    ← Documentación del proyecto
@@ -42,10 +42,10 @@ portfolio/                          ← Carpeta raíz del proyecto
 
 ### ✅ Archivos Principales (YA CREADOS)
 - [x] index.html
-- [x] proyectos.html
-- [x] servicios.html
-- [x] cursos.html
-- [x] contacto.html
+- [x] projects.html
+- [x] services.html
+- [x] certifications.html
+- [x] contact.html
 - [x] css/style.css
 - [x] js/script.js
 - [x] README.md
@@ -70,7 +70,7 @@ portfolio/                          ← Carpeta raíz del proyecto
 - Botones de acción
 - Diseño hero con hexágono
 
-### 2. proyectos.html (Portafolio) ⭐ ACTUALIZADO
+### 2. projects.html (Portafolio) ⭐ ACTUALIZADO
 - 6 proyectos de ejemplo
 - **Filtros interactivos** por categoría (Web, Mobile, Data, AI/ML, Design)
 - Imágenes/iconos de proyectos
@@ -78,20 +78,20 @@ portfolio/                          ← Carpeta raíz del proyecto
 - Enlaces a GitHub y demos
 - Animaciones smooth al filtrar
 
-### 3. servicios.html (Servicios Freelance) ⭐ NUEVO
+### 3. services.html (Servicios Freelance) ⭐ NUEVO
 - 6 servicios con precios
 - Características incluidas
 - Herramientas utilizadas
 - Proceso de trabajo
 - CTA para cotización
 
-### 4. cursos.html (Certificaciones)
+### 4. certifications.html (Certificaciones)
 - 5 cursos/certificaciones
 - Acordeones expandibles
 - Enlaces a credenciales
 - Información detallada
 
-### 5. contacto.html (Contacto)
+### 5. contact.html (Contacto)
 - Email, teléfono, ubicación
 - LinkedIn, GitHub, redes sociales
 - Diseño con cards interactivas
@@ -174,10 +174,10 @@ En cada HTML, línea 10, cambia:
 ```
 
 ### Agregar más proyectos
-Copia un bloque `.project-card` en `proyectos.html`
+Copia un bloque `.project-card` en `projects.html`
 
 ### Agregar más servicios
-Copia un bloque `.service-card` en `servicios.html`
+Copia un bloque `.service-card` en `services.html`
 
 ## ⚠️ IMPORTANTE
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Rodrigo Trejo Portfolio - Data Scientist & Engineer">
-    <title>Home - Rodrigo Trejo Portfolio</title>
+    <title>Rodrigo Trejo — Data Scientist &amp; Analytics Engineer</title>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -23,7 +23,13 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+
+    <!-- Canonical & theme -->
+    <link rel="canonical" href="https://rodrigo-trejo-hdz.github.io/">
+    <meta name="theme-color" content="#FAFAF8">
+    <meta name="color-scheme" content="light">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2YY6B3ZL1"></script>
@@ -43,7 +49,7 @@
       "jobTitle": "Data Scientist",
       "url": "https://rodrigo-trejo-hdz.github.io/",
       "sameAs": [
-        "www.linkedin.com/in/rodrigo-trejo-hdz/",
+        "https://www.linkedin.com/in/rodrigo-trejo-hdz/",
         "https://github.com/Rodrigo-Trejo-Hdz"
       ],
       "knowsAbout": ["Python", "SQL", "Power BI", "Machine Learning", "AWS", "PySpark", "ETL/ELT", "Scikit-learn", "React", "Streamlit", "Data Engineering", "Analytics Engineering"],
@@ -60,37 +66,38 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Source+Serif+4:wght@600;700;900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <!-- NAVIGATION -->
     <nav>
-        <a href="index.html" class="logo">&lt;RT/&gt;</a>
+        <a href="index.html" class="logo" aria-label="Home">RT</a>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="proyectos.html">Projects</a></li>
-            <li><a href="cursos.html">Certifications</a></li>
-            <li><a href="contacto.html">Contact</a></li>
-            <li><a href="servicios.html">Services</a></li>
-            <li>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <span class="theme-toggle-icon">🌙</span>
-                </button>
-            </li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html">Services</a></li>
         </ul>
     </nav>
 
     <!-- MAIN CONTENT -->
-    <div class="container">
+    <div class="container" id="main">
         <section class="hero-section">
             <!-- Hero Content -->
             <div class="hero-content">
                 <div class="greeting">HI, I'M</div>
                 <h1>Rodrigo Trejo<br><span>Data Scientist</span></h1>
                 <p class="subtitle">Creating <span>data-driven solutions</span> that make an impact</p>
+                <div class="availability-badge">
+                    <span class="availability-dot" aria-hidden="true"></span>
+                    Open to Data Scientist &amp; Analytics Engineer roles — Remote · MX · US · EU
+                </div>
                 <p class="hero-description">
                     Data Scientist passionate about transforming complex data into actionable insights.
                     Specialized in machine learning, business intelligence, and cloud-based analytics solutions.
@@ -112,21 +119,15 @@
 
                 <!-- Action buttons -->
                 <div class="cta-buttons">
-                    <a href="proyectos.html" class="btn btn-primary">View Projects</a>
+                    <a href="projects.html" class="btn btn-primary">View Projects</a>
                     <a href="assets/cv/Rodrigo_Trejo_CV.pdf" class="btn btn-secondary" download>Download CV</a>
-                    <a href="contacto.html" class="btn btn-secondary">Contact</a>
                 </div>
             </div>
 
             <!-- Hero Visual -->
             <div class="hero-visual">
-                <div class="hero-shape">
-                    <div class="shape-hexagon">
-                        <img src="assets/images/profile.png" alt="Rodrigo Trejo">
-                    </div>
-                    <div class="code-decoration">&lt;code/&gt;</div>
-                    <div class="code-decoration">{...}</div>
-                    <div class="code-decoration">( )</div>
+                <div class="hero-photo">
+                    <img src="assets/images/profile.webp" alt="Rodrigo Trejo" width="720" height="720">
                 </div>
             </div>
         </section>
@@ -143,12 +144,16 @@
                 </div>
                 <div class="about-highlights">
                     <div class="highlight-item">
-                        <div class="highlight-number">2+</div>
-                        <div class="highlight-label">Years at Data Bunker</div>
+                        <div class="highlight-number">40+</div>
+                        <div class="highlight-label">Companies Served</div>
                     </div>
                     <div class="highlight-item">
-                        <div class="highlight-number">6+</div>
-                        <div class="highlight-label">Projects Delivered</div>
+                        <div class="highlight-number">200M</div>
+                        <div class="highlight-label">Records per Pipeline</div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-number">20+</div>
+                        <div class="highlight-label">Processes Automated</div>
                     </div>
                     <div class="highlight-item">
                         <div class="highlight-number">ITESM</div>
@@ -157,7 +162,73 @@
                 </div>
             </div>
         </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section class="experience-section">
+            <div class="section-number">00. EXPERIENCE</div>
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-period">2024 — Present</div>
+                    <div class="timeline-content">
+                        <h3>Data & Analytics Coordinator</h3>
+                        <div class="timeline-company">Data Bunker · Pricing Intelligence</div>
+                        <ul>
+                            <li>Lead a cross-regional team of 7 delivering data and BI solutions for 40+ FMCG, retail, and CPG companies.</li>
+                            <li>Design and scale ETL/ELT pipelines on AWS (Glue, S3, Athena) processing tables of 20M–200M records.</li>
+                            <li>Build Power BI dashboards for pricing strategy, elasticity, supplier negotiation, and product launches.</li>
+                            <li>Automated 20+ recurring data processes and developed internal web tools with React and AWS (Amplify, ECS).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <!-- TODO: confirmar años exactos de estos proyectos -->
+                    <div class="timeline-period">ITESM Partnerships</div>
+                    <div class="timeline-content">
+                        <h3>Industry Data Science Projects</h3>
+                        <div class="timeline-company">Danone · Coppel · FEMSA</div>
+                        <ul>
+                            <li>Built a production KPI tracking app for Bonafont (Danone) with Streamlit, enabling plant-level reporting.</li>
+                            <li>Applied combinatorial optimization to last-mile delivery routing for Coppel.</li>
+                            <li>Delivered SKU-level energy profitability analysis for FEMSA with Python.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo" aria-label="Home">RT</a>
+                <p>Data Scientist &amp; Analytics Engineer — turning retail data into pricing decisions.</p>
+            </div>
+            <div class="footer-nav" aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="contact.html">Contact</a>
+                <a href="services.html">Services</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/Rodrigo-Trejo-Hdz" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/rodrigo-trejo-hdz/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="mailto:idm.rodrigo.trejo@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Rodrigo Iván Trejo Hernández</span>
+            <span class="footer-status"><span class="availability-dot" aria-hidden="true"></span>Open to opportunities</span>
+        </div>
+    </footer>
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>

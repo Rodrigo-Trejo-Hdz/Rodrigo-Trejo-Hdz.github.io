@@ -20,10 +20,10 @@ This project is a **static HTML web portfolio** for a professional **Data Scient
 ```
 Rodrigo-Trejo-Hdz.github.io/
 ├── index.html              # Main page / Hero section
-├── servicios.html          # Freelance services offered
-├── cursos.html            # Certifications and courses
-├── contacto.html          # Contact information
-├── proyectos.html          # Project portfolio
+├── services.html          # Freelance services offered
+├── certifications.html            # Certifications and courses
+├── contact.html          # Contact information
+├── projects.html          # Project portfolio
 │
 ├── css/
 │   └── style.css          # Centralized global styles
@@ -61,17 +61,16 @@ Rodrigo-Trejo-Hdz.github.io/
 - Title: "Rodrigo Trejo - Data Scientist"
 - Professional profile description
 - **12 Technical skills**: Python, SQL, Power BI, AWS, MATLAB, C++, Excel, Simulink, React, Wolfram, TIA Portal, Fusion 360
-- CTA buttons: "View Projects" and "Contact"
+- CTA buttons: "View Projects", "Download CV" and "Contact"
 - Hero visual with hexagon decoration
-- **Theme toggle button** in navigation (Light/Dark mode)
 
 **Key elements**:
-- Line 92: Professional name
-- Lines 101-112: Skill tags (12 real technologies)
-- Line 127: Can contain profile photo or emoji
-- Lines 79-81: Theme toggle button
+- Professional name in hero (h1)
+- Skill tags (10 real technologies)
+- Profile photo in hexagon
+- Availability badge, About and Experience sections
 
-### 2. proyectos.html - Projects (01. PORTFOLIO)
+### 2. projects.html - Projects (01. PORTFOLIO)
 **Purpose**: Showcase featured projects
 
 **Content**:
@@ -91,7 +90,7 @@ Rodrigo-Trejo-Hdz.github.io/
 - "All Projects" shows all
 - Smooth animations (fade + scale)
 - Automatic grid reorganization
-- Buttons at [proyectos.html:75-82](proyectos.html#L75-L82)
+- Buttons at [projects.html:75-82](projects.html#L75-L82)
 - JavaScript logic at [script.js:172-226](js/script.js#L172-L226)
 
 **Customization pending**:
@@ -99,7 +98,7 @@ Rodrigo-Trejo-Hdz.github.io/
 - Update titles, descriptions, and technologies
 - Add real GitHub URLs and demos
 
-### 3. cursos.html - Certifications (02. EDUCATION)
+### 3. certifications.html - Certifications (02. EDUCATION)
 **Purpose**: Show academic training and certifications
 
 **Content**:
@@ -126,7 +125,7 @@ Rodrigo-Trejo-Hdz.github.io/
 - Only one course expanded at a time
 - Function `toggleCourse()` at [script.js:21-34](js/script.js#L21-L34)
 
-### 4. contacto.html - Contact (03. CONNECT)
+### 4. contact.html - Contact (03. CONNECT)
 **Purpose**: Facilitate professional communication
 
 **Content**:
@@ -140,7 +139,7 @@ Rodrigo-Trejo-Hdz.github.io/
 
 **Note**: All links are updated with real information
 
-### 5. servicios.html - Services (04. FREELANCE)
+### 5. services.html - Services (04. FREELANCE)
 **Purpose**: Present professional services offered
 
 **Content**:
@@ -172,19 +171,24 @@ Rodrigo-Trejo-Hdz.github.io/
 **Ubicación**: [css/style.css](css/style.css)
 
 **Características**:
-- Variables CSS globales (líneas 4-12):
-  - `--primary-color: #00f5ff` (cyan)
-  - `--secondary-color: #9d4edd` (púrpura)
-  - `--accent-color: #ff006e` (rosa)
-  - `--bg-dark: #0a0e27`
-  - `--bg-card: #151b3d`
+- Variables CSS globales (tokens de la paleta editorial clara):
+  - `--bg: #FAFAF8` (fondo del sitio)
+  - `--surface: #FFFFFF` (tarjetas y superficies)
+  - `--mist: #EEF2F6` (chips/badges y fondos suaves)
+  - `--ink: #1E3A5F` (títulos, marca, logo)
+  - `--accent: #C2703D` (CTAs y links destacados)
+  - `--accent-strong: #A85E31` (hover de CTA y texto accent pequeño, cumple AA)
+  - `--data: #2E6E68` (SOLO gráficas/visualizaciones de datos)
+  - `--text: #1A1A1A` / `--text-soft: #5A5A5A`
+  - `--border`, `--nav-bg` (derivados)
 
-- Diseño moderno con:
-  - Fondo oscuro con gradientes radiales
-  - Efectos de glow/sombras neón
+- Diseño editorial claro con:
+  - Fondo claro con lavados radiales sutiles
+  - Sombras suaves en tonos ink
   - Transiciones suaves
   - Sistema responsive
   - Navegación fija con backdrop-filter
+  - **Un solo tema claro** (el dark mode fue eliminado en v4.2)
 
 **Secciones principales**:
 1. Variables globales
@@ -226,18 +230,19 @@ Rodrigo-Trejo-Hdz.github.io/
 
 ## Diseño y Estilo Visual
 
-### Paleta de Colores
-- **Primario (Cyan)**: #00f5ff - Acentos, enlaces, títulos destacados
-- **Secundario (Púrpura)**: #9d4edd - Gradientes, elementos secundarios
-- **Acento (Rosa)**: #ff006e - CTAs, elementos importantes
-- **Fondo Oscuro**: #0a0e27 - Background principal
-- **Cards**: #151b3d - Fondo de tarjetas
-- **Texto Claro**: #ffffff - Texto principal
-- **Texto Gris**: #a8b2d1 - Texto secundario
+### Paleta de Colores (editorial clara, v4.2)
+- **Ink (azul marino)**: #1E3A5F - Títulos, nombre del hero, logo, marca
+- **Accent (terracota)**: #C2703D - Botones CTA, links destacados (hover: #A85E31)
+- **Data (teal)**: #2E6E68 - SOLO dentro de gráficas/visualizaciones de datos
+- **Fondo**: #FAFAF8 - Background principal
+- **Surface**: #FFFFFF - Fondo de tarjetas
+- **Mist**: #EEF2F6 - Chips, badges, fondos suaves
+- **Texto**: #1A1A1A principal / #5A5A5A secundario
+- Regla: los gradientes de project-image-container son sobrios (--ink→--data o --ink→--accent)
 
 ### Efectos Visuales
-- Gradientes animados en fondo
-- Box-shadow con glow neón en hover
+- Lavados radiales sutiles en fondo
+- Box-shadow suave (tonos ink) en hover
 - Backdrop-filter blur en navegación
 - Transiciones smooth (0.3s ease)
 - Transformaciones (scale, translateY) en interacciones
@@ -262,20 +267,20 @@ Rodrigo-Trejo-Hdz.github.io/
    - Actualizar [index.html:67](index.html#L67)
 
 4. **Proyectos**:
-   - Editar [proyectos.html](proyectos.html)
+   - Editar [projects.html](projects.html)
    - Agregar imágenes en `assets/images/`
    - Actualizar títulos, descripciones, tecnologías, enlaces
 
 5. **Servicios**:
-   - Editar [servicios.html](servicios.html)
+   - Editar [services.html](services.html)
    - Actualizar precios, características, herramientas
 
 6. **Certificaciones**:
-   - Editar [cursos.html](cursos.html)
+   - Editar [certifications.html](certifications.html)
    - Agregar URLs de credenciales reales
 
 7. **Contacto**:
-   - Editar [contacto.html](contacto.html)
+   - Editar [contact.html](contact.html)
    - Actualizar email, teléfono, redes sociales, ubicación
 
 8. **Colores**:
@@ -322,14 +327,14 @@ Rodrigo-Trejo-Hdz.github.io/
 - ✅ **Reorganized navigation (Projects first, Services last)**
 - ✅ **Section numbering corrected**
 - ✅ **SEO implementation**: sitemap.xml, Open Graph, JSON-LD, Google Analytics, Favicons
-- ✅ **Light/Dark Mode Toggle**: Theme switcher with localStorage persistence
 - ✅ **Project Filters**: Interactive category filtering with animations
+- ✅ **Light editorial theme (v4.2)**: single light theme; dark mode removed
 
 ### Pending customization:
 - ⚠️ Add real projects with images
-- ⚠️ Customize services and pricing
-- ⚠️ Create og-image.jpg (1200x630px)
-- ⚠️ Create favicon files (16x16, 32x32, 180x180)
+- ⚠️ Add real project screenshots (product-search-preview.png, elasticity-preview.png — cards use emoji placeholders with TODO comments)
+- ⚠️ Point "View on GitHub" buttons to real repos (currently link to profile root)
+- ⚠️ Confirm exact years of ITESM partnership projects (TODO in index.html Experience section)
 - ⚠️ Optimize images
 
 ## Navegación del Código
@@ -344,9 +349,8 @@ Rodrigo-Trejo-Hdz.github.io/
 ### Navigation structure:
 - Fixed navbar on all pages
 - **Links (in order)**: Home, Projects, Certifications, Contact, Services
-- Logo: "&lt;/Dev&gt;" with gradient
+- Logo: "RT" monogram badge (rounded square, ink→data gradient, white letters — matches the favicon)
 - Automatic active state per page
-- **Theme toggle button**: Light/Dark mode switcher (🌙/☀️)
 - Section numbers:
   - 01. PORTFOLIO (Projects)
   - 02. EDUCATION (Certifications)
@@ -379,7 +383,6 @@ Rodrigo-Trejo-Hdz.github.io/
 - Animaciones on-scroll (IntersectionObserver)
 - Acordeones expandibles
 - Navegación activa automática
-- **Light/Dark Mode Toggle**: Switch between themes with localStorage persistence
 - **Project Filters**: Interactive filtering by category with smooth animations
 
 ## Buenas Prácticas Implementadas
@@ -441,15 +444,60 @@ git log --oneline
 
 Este portafolio pertenece a **Rodrigo Trejo**, Data Scientist.
 
-La información de contacto real debe actualizarse en [contacto.html](contacto.html).
+La información de contacto real debe actualizarse en [contact.html](contact.html).
 
 ---
 
-**Last update**: 2026-01-13
-**Project version**: 4.0 (Full Featured)
+**Last update**: 2026-07-13
+**Project version**: 4.2
 **Status**: In production (GitHub Pages)
 
 ## Recent Changes
+
+### Version 4.4 - July 13, 2026
+**Conversion tracking, English URLs, final polish**:
+1. **Title tags rewritten**: index is now "Rodrigo Trejo — Data Scientist & Analytics Engineer"; subpages follow "Page — Rodrigo Trejo | descriptor".
+2. **GA conversion events** (`initEventTracking()` in script.js): `cv_download`, `calendly_click`, `linkedin_click`, `github_click`, `email_click` — measurable funnel for both goals.
+3. **Forced light mode**: `<meta name="color-scheme" content="light">` + `html { color-scheme: light }` (prevents Android Chrome auto-darkening and extension mangling).
+4. **Accessibility trio**: skip-link ("Skip to content" → `#main` on `.container`), `prefers-reduced-motion` media query, and a root `favicon.ico` (16/32/48 multi-size) for blind `/favicon.ico` requests.
+5. **Hero CTAs reduced to 2**: View Projects (primary) + Download CV (secondary); Contact removed (lives in nav/badge/footer).
+6. **`::selection`** in terracotta tint and **scrollbar** styled to palette (WebKit + Firefox).
+7. **MATLAB card consistency**: fake-button span replaced by plain `.course-count` text ("6 courses completed").
+8. **URLs migrated to English**: `proyectos→projects`, `cursos→certifications`, `contacto→contact`, `servicios→services` (git mv). All internal refs, og:url, canonical, sitemap, and docs updated. Old Spanish URLs remain as noindex meta-refresh redirect stubs so shared links don't break.
+
+### Version 4.3 - July 13, 2026
+**Professionalism pass (functional + visual)**:
+1. **Mobile menu actually works now**: previously the hamburger toggled a `.show` class with no CSS behind it. Now: CSS-driven (button hidden ≥768px, dropdown panel under the fixed nav), JS handles open/close state with `aria-expanded`/`aria-controls`, closes on link click and on resize to desktop. Nav stays as a row on mobile; container padding-top back to 100px.
+2. **Keyboard accessibility**: accordion toggle is now a real `<button class="toggle-icon">` (×10) with `aria-expanded` synced by `toggleCourse()`; expanded max-height raised to 1600px (MATLAB card was clipping). Global `:focus-visible` outline in accent.
+3. **Heading hierarchy**: every page now has exactly one `<h1>` (section-header titles promoted; CSS rule `h2, .section-header h1` keeps identical visuals).
+4. **profile.png (2 MB) → profile.webp (15 KB)**, square-cropped 720px, with width/height attributes. Old PNG deleted.
+5. **SEO kit**: robots.txt, branded 404.html (noindex), `<link rel="canonical">` + `<meta name="theme-color">` on all 5 pages, sitemap lastmod updated and duplicate /index.html entry removed.
+6. **Portfolio card removed** from contact grid (was a circular self-link); grid now 4 items.
+7. **All UI emojis replaced with inline Feather-style SVG icons** (stroke currentColor): contact icons, social links, service icons, accordion chevron, hamburger/close. Project-card emojis intentionally left for the upcoming projects session.
+8. **Hero sobered**: floating hexagon + code decorations removed; photo now in a rounded-square `.hero-photo` with flat terracotta offset shadow. `@keyframes float` removed (pulse kept for availability dot).
+9. **Site footer on all 5 pages**: brand + tagline, footer nav, social icons, copyright + "Open to opportunities" status line.
+10. **Typography**: Source Serif 4 (600/700/900) for h1/h2/booking-title on all pages (Georgia fallback); Inter remains for body and UI.
+11. **Logo unified with favicon**: nav `.logo` and footer `.footer-logo` are now an "RT" monogram badge (rounded square, ink→data gradient, white letters) instead of the `<RT/>` text mark; og-image footer updated to match and regenerated.
+
+### Version 4.2 - July 13, 2026
+**Light editorial redesign + dark mode removal**:
+1. **New color system**: light editorial palette (`--bg #FAFAF8`, `--surface #FFFFFF`, `--mist #EEF2F6`, `--ink #1E3A5F`, `--accent #C2703D`, `--data #2E6E68`, `--text #1A1A1A`, `--text-soft #5A5A5A`, plus derived `--accent-strong #A85E31`, `--border`, `--nav-bg`). All neon hex (#00f5ff, #9d4edd, etc.) removed from HTML/CSS/JS — verified by grep.
+2. **Dark mode removed completely**: theme-toggle button removed from all 5 navbars, `initThemeToggle()` deleted from script.js (no localStorage/data-theme left), `[data-theme]` CSS blocks and `.theme-toggle` styles deleted. No dead references remain.
+3. **Color application**: ink for headings/brand/logo; accent for CTAs (hover accent-strong); mist chips with ink text; data (teal) only inside the architecture SVG diagram; project image gradients now sober ink→data / ink→accent; code blocks dark ink with light text; active filter buttons ink.
+4. **og-image.html + og-image.jpg** regenerated with the editorial palette (matches favicon RT branding).
+5. **Contrast (WCAG)**: all text pairs pass AA (4.66:1–16.65:1) except white-on-accent CTA button text (3.70:1, passes AA only for large text — by explicit palette spec; switch button base to `--accent-strong` if strict AA is required).
+6. Layout and structure unchanged — color system only.
+
+### Version 4.1 - July 13, 2026
+**Fixes & career-focused improvements**:
+1. **Broken links fixed**: LinkedIn hrefs were relative (`www.linkedin.com/...` → 404); now `https://www.linkedin.com/in/rodrigo-trejo-hdz/` in contact.html and index.html JSON-LD.
+2. **Contact form removed**: The Formspree form had a placeholder ID and never worked. Replaced by a "Book a Free 30-Minute Call" section linking to Calendly (`https://calendly.com/idm-rodrigo-trejo/30min`) plus a Download CV button. Form CSS replaced by `.booking-section` styles.
+3. **Favicons created**: New "RT" monogram (rounded square, gradient #1E3A5F → #2E6E68, white letters) as `assets/favicon/favicon.svg` + generated PNGs (16x16, 32x32, apple-touch-icon 180x180). All 5 pages now also link favicon-16x16.png. No favicon 404s remain.
+4. **og-image.jpg generated** (1200x630) in assets/images/ following the og-image.html template design — social sharing cards now render with image.
+5. **index.html**: About highlights updated to real metrics (40+ companies, 200M records/pipeline, 20+ processes automated, ITESM). New **Experience section** (timeline: Data Bunker coordinator role + ITESM industry projects). **Availability badge** ("Open to Data Scientist & Analytics Engineer roles — Remote · MX · US · EU") in hero and contact page.
+6. **projects.html**: New first card "Pricing Data Platform — AWS" with inline SVG architecture diagram (Retail Sources → S3 Raw → Glue → S3 Curated → Athena → Power BI). Missing preview images replaced with emoji placeholders (TODO comments).
+7. **services.html**: All prices replaced with "Custom Quote — free initial consultation". "Technical Consulting" reworked into "Data & Analytics Consulting" (data strategy, modeling, BI, pricing analytics). Final CTA now leads with Calendly booking.
+8. **Technical polish**: stray root `style.css` deleted; duplicated JS filter functions merged into `initCardFilters()`; `rel="noopener noreferrer"` on all `target="_blank"` links; `aria-hidden` on decorative emoji icons; new CSS sections (availability badge, experience timeline, arch diagram, booking).
 
 ### Version 4.0 - January 13, 2026 (Session 2)
 **New Features**:
@@ -467,7 +515,7 @@ La información de contacto real debe actualizarse en [contacto.html](contacto.h
    - Smooth fade + scale animations
    - Automatic grid reorganization
    - Each project tagged with `data-category` attribute
-   - Code: [proyectos.html:75-82](proyectos.html#L75-L82), [js/script.js:172-226](js/script.js#L172-L226)
+   - Code: [projects.html:75-82](projects.html#L75-L82), [js/script.js:172-226](js/script.js#L172-L226)
 
 3. **Navigation Update**:
    - Corrected order: Home → Projects → Certifications → Contact → Services

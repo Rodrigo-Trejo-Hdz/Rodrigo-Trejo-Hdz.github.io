@@ -69,10 +69,10 @@ This is a static HTML portfolio website designed for Data Scientists and tech pr
 ```
 Rodrigo-Trejo-Hdz.github.io/
 ├── index.html              # Home page
-├── proyectos.html          # Projects portfolio (01. PORTFOLIO)
-├── cursos.html            # Certifications (02. EDUCATION)
-├── contacto.html          # Contact info (03. CONNECT)
-├── servicios.html         # Freelance services (04. FREELANCE)
+├── projects.html          # Projects portfolio (01. PORTFOLIO)
+├── certifications.html            # Certifications (02. EDUCATION)
+├── contact.html          # Contact info (03. CONNECT)
+├── services.html         # Freelance services (04. FREELANCE)
 │
 ├── css/
 │   └── style.css          # Main stylesheet
@@ -102,14 +102,14 @@ Landing page with hero section, professional introduction, 12 technical skills, 
 - MATLAB, C++, Excel, Simulink
 - React, Wolfram, TIA Portal, Fusion 360
 
-### 2. **Projects** (`proyectos.html`) - 01. PORTFOLIO
+### 2. **Projects** (`projects.html`) - 01. PORTFOLIO
 Portfolio of 6 featured projects with:
 - Project descriptions
 - Technologies used
 - Code snippets
 - GitHub and live demo links
 
-### 3. **Certifications** (`cursos.html`) - 02. EDUCATION
+### 3. **Certifications** (`certifications.html`) - 02. EDUCATION
 8 professional certifications with expandable accordion:
 1. Advanced Microsoft Power BI (Coursera)
 2. Machine Learning in Power BI (Coursera)
@@ -120,7 +120,7 @@ Portfolio of 6 featured projects with:
 7. Bloomberg Finance Fundamentals (Bloomberg)
 8. Storyselling Course (ITAM)
 
-### 4. **Contact** (`contacto.html`) - 03. CONNECT
+### 4. **Contact** (`contact.html`) - 03. CONNECT
 Contact information with:
 - Email: idm.rodrigo.trejo@gmail.com
 - LinkedIn profile
@@ -128,7 +128,7 @@ Contact information with:
 - Location: Estado de México, Northern Metro Area
 - Portfolio link
 
-### 5. **Services** (`servicios.html`) - 04. FREELANCE
+### 5. **Services** (`services.html`) - 04. FREELANCE
 6 freelance services offered:
 - Data Analysis and Cleaning
 - UI/UX Development
@@ -192,10 +192,10 @@ Edit CSS variables in `css/style.css`:
 
 1. **Name and Title**: `index.html` line 36
 2. **Skills**: `index.html` lines 44-56
-3. **Projects**: Update `proyectos.html` with your projects
-4. **Certifications**: Update `cursos.html` with your credentials
-5. **Contact**: Update `contacto.html` with your info
-6. **Services**: Update `servicios.html` with your offerings
+3. **Projects**: Update `projects.html` with your projects
+4. **Certifications**: Update `certifications.html` with your credentials
+5. **Contact**: Update `contact.html` with your info
+6. **Services**: Update `services.html` with your offerings
 
 ### Profile Photo
 

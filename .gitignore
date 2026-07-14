@@ -34,3 +34,5 @@ yarn.lock
 .env
 .env.local
 config.local.js
+# Configuración local de Claude Code
+.claude/
