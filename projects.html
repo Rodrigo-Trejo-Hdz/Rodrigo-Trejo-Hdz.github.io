@@ -172,27 +172,28 @@
                 <div class="project-info">
                     <h3 class="project-title">Product Similarity Search Tool</h3>
                     <p class="project-description">
-                        Internal web app that identifies equivalent products across retailers and brands.
-                        Users upload a product list or image and the system returns the closest matches
-                        found on the web — combining fuzzy text matching on descriptions and visual
-                        similarity search (similar to Google Lens) across Mexico, US, Colombia, and Argentina.
+                        Internal web app that identifies equivalent products across retailers and
+                        brands in Mexico, the US, Colombia, and Argentina. Users upload product
+                        lists and get the closest matches by description through a custom
+                        inverted-index fuzzy matching engine (built from scratch, no external
+                        matching libraries), or search visually via the Google Lens API.
+                        Result history is persisted to S3.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Fuzzy Matching</span>
-                        <span class="tech-badge">Image Similarity</span>
                         <span class="tech-badge">React</span>
-                        <span class="tech-badge">AWS Amplify</span>
-                        <span class="tech-badge">AWS ECS</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">Inverted Index</span>
+                        <span class="tech-badge">Google Lens API</span>
+                        <span class="tech-badge">AWS S3</span>
                     </div>
-                    <div class="project-code">def find_similar_products(query, method):
-    if method == "text":
-        return fuzzy_match(query, product_db)
-    elif method == "image":
-        embedding = encode_image(query)
-        return cosine_similarity_search(
-            embedding, visual_index
-        )</div>
+                    <div class="project-code">// Inverted index over product tokens
+for (const token of tokenize(desc)) {
+  (index[token] ??= []).push(productId);
+}
+// Score candidates by token overlap
+const score = shared(queryTokens, cand)
+            / union(queryTokens, cand);</div>
                     <div class="project-links">
                         <span class="project-link" style="cursor:default; color:var(--text-soft); border-color:var(--border); background:var(--mist);">
                             Private — Company Project
@@ -249,16 +250,18 @@ def price_elasticity(q1, q0, p1, p0):
                 <div class="project-info">
                     <h3 class="project-title">Delivery Management Platform</h3>
                     <p class="project-description">
-                        Full-stack internal web app that replaced a manual Google Sheets workflow.
-                        Tracks weekly deliverables for 37+ active clients with admin panels,
-                        HubSpot CRM sync, a prospect pipeline (kanban), contract and billing records,
-                        and a live business metrics dashboard.
+                        Full-stack internal platform that replaced a manual Google Sheets workflow
+                        for tracking weekly deliverables across 37+ active clients. Weekly delivery
+                        calendar with per-client templates and a full audit log, prospect pipeline
+                        with HubSpot sync, contract and billing management, service cost tracking,
+                        and client health scores — secured with AWS Cognito.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">React</span>
+                        <span class="tech-badge">TypeScript</span>
                         <span class="tech-badge">Node.js</span>
                         <span class="tech-badge">PostgreSQL</span>
-                        <span class="tech-badge">AWS Amplify</span>
+                        <span class="tech-badge">AWS Cognito</span>
                         <span class="tech-badge">AWS ECS</span>
                         <span class="tech-badge">HubSpot API</span>
                     </div>
