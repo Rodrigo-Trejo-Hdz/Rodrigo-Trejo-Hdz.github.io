@@ -153,7 +153,7 @@ function initEventTracking() {
         const href = link.getAttribute('href');
         let eventName = null;
 
-        if (href.indexOf('Rodrigo_Trejo_CV.pdf') !== -1) eventName = 'cv_download';
+        if (href.indexOf('Rodrigo_Trejo_CV') !== -1) eventName = 'cv_download';
         else if (href.indexOf('calendly.com') !== -1) eventName = 'calendly_click';
         else if (href.indexOf('linkedin.com') !== -1) eventName = 'linkedin_click';
         else if (href.indexOf('github.com') !== -1) eventName = 'github_click';
